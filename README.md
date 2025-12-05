@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Nexus: Intelligent Network Intelligence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Target**: Social Networking Simplified via Clear Objectives.
 
-Currently, two official plugins are available:
+Nexus is a next-generation network intelligence tool designed to transform how companies and individuals grow their social capital. Unlike traditional CRM or social platforms that are passive repositories of contacts, Nexus is **objective-driven**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Vision
+Social networking is often aimless. We collect business cards and LinkedIn connections without a strategy. Nexus changes this by starting with the question: **"What is your objective?"**
 
-## React Compiler
+- **For Growth**: "I need to find 5 Seed Investors in San Francisco."
+- **For Hiring**: "I need a Senior Rust Engineer who has worked at a FAANG company."
+- **For Sales**: "I need to connect with CTOs of Series B Fintech startups."
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Nexus visualizes your network, identifies the gaps, and provides the intelligence to bridge them using data enrichment (Hunter.io, LinkedIn, etc.) and AI-driven analysis.
 
-## Expanding the ESLint configuration
+## The Social Networking Radar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To grow a company, you need a balanced network. Nexus visualizes your social capital across key domains:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```mermaid
+radar-chart
+    title Network Composition & Needs
+    "Investors" : [80, 50, 70, 40, 90, 60]
+    "Engineers" : [30, 90, 40, 80, 50, 70]
+    "Sales" : [60, 40, 85, 30, 60, 50]
+    "Marketing" : [40, 30, 50, 80, 40, 60]
+    "Product" : [70, 80, 60, 50, 80, 40]
+    "Recruiting" : [50, 60, 70, 40, 50, 80]
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🕸️ Interactive Graph Visualization
+- **Force-Directed Graph**: Visualize connections dynamically.
+- **Node Analysis**: Drill down into specific people or companies.
+- **Filtering**: View only the nodes relevant to your current objective.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🧠 AI-Driven Intelligence
+- **Objective Search**: Don't just search for names. Search for *goals*.
+- **Gap Analysis**: "You have strong connection to Engineers, but weak connection to Investors."
+
+### 🔌 Data Integration
+- **Hunter.io**: Enriches profiles with verified email addresses.
+- **Cloudflare Integration**: Serverless backend for fast, scalable data processing.
+
+## Tech Stack
+- **Frontend**: Vite + React + TypeScript + Tailwind CSS
+- **Visualization**: `react-force-graph-2d`
+- **Backend**: Cloudflare Pages Functions
+- **Deployment**: Cloudflare Pages
