@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/graph/graphcanvas.tsx","./src/components/graph/nodedetailspanel.tsx","./src/layouts/dashboardlayout.tsx","./src/lib/utils.ts","./src/pages/dashboard.tsx","./src/pages/login.tsx"],"errors":true,"version":"5.9.3"}

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Link from "next/link";
+import { Link, useLocation } from "react-router-dom";
 import { Network, Search, Settings, User, Map, Database } from "lucide-react";
 
 export default function DashboardLayout({
@@ -7,6 +7,8 @@ export default function DashboardLayout({
 }: {
     children: ReactNode;
 }) {
+    const location = useLocation();
+
     return (
         <div className="flex h-screen bg-background overflow-hidden">
             {/* Sidebar */}
@@ -17,14 +19,14 @@ export default function DashboardLayout({
                 </div>
 
                 <nav className="flex-1 py-6 space-y-2 px-2 md:px-4">
-                    <NavItem href="/dashboard" icon={<Map />} label="Graph View" active />
-                    <NavItem href="/dashboard/data" icon={<Database />} label="Data Sources" />
-                    <NavItem href="/dashboard/search" icon={<Search />} label="Intelligence" />
+                    <NavItem href="/dashboard" icon={<Map />} label="Graph View" currentPath={location.pathname} />
+                    <NavItem href="/dashboard/data" icon={<Database />} label="Data Sources" currentPath={location.pathname} />
+                    <NavItem href="/dashboard/search" icon={<Search />} label="Intelligence" currentPath={location.pathname} />
                 </nav>
 
                 <div className="p-4 border-t border-white/10">
-                    <NavItem href="/profile" icon={<User />} label="Profile" />
-                    <NavItem href="/settings" icon={<Settings />} label="Settings" />
+                    <NavItem href="/profile" icon={<User />} label="Profile" currentPath={location.pathname} />
+                    <NavItem href="/settings" icon={<Settings />} label="Settings" currentPath={location.pathname} />
                 </div>
             </aside>
 
@@ -36,10 +38,11 @@ export default function DashboardLayout({
     );
 }
 
-function NavItem({ href, icon, label, active }: { href: string; icon: ReactNode; label: string; active?: boolean }) {
+function NavItem({ href, icon, label, currentPath }: { href: string; icon: ReactNode; label: string; currentPath: string }) {
+    const active = currentPath === href || (href !== "/dashboard" && currentPath.startsWith(href));
     return (
         <Link
-            href={href}
+            to={href}
             className={`flex items-center p-3 rounded-lg transition-all duration-200 group ${active
                     ? "bg-primary/20 text-primary"
                     : "text-muted-foreground hover:bg-white/5 hover:text-foreground"

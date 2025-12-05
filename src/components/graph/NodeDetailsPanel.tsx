@@ -16,8 +16,8 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                     <div>
                         <h2 className="text-2xl font-bold text-foreground">{node.label}</h2>
                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium mt-2 ${node.type === 'person' ? 'bg-blue-500/20 text-blue-400' :
-                                node.type === 'company' ? 'bg-red-500/20 text-red-400' :
-                                    'bg-green-500/20 text-green-400'
+                            node.type === 'company' ? 'bg-red-500/20 text-red-400' :
+                                'bg-green-500/20 text-green-400'
                             }`}>
                             {node.type.toUpperCase()}
                         </span>
