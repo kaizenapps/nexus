@@ -33,8 +33,17 @@ export default function Intelligence() {
         { subject: 'Recency', A: 65, B: 85, fullMark: 150 },
     ];
 
+    // Dynamic Next Move
+    const potentialMoves = graphData.nodes.filter(n => n.group === 'person' && n.name !== 'Preston Zen');
+    const nextMove = potentialMoves.length > 0
+        ? potentialMoves[Math.floor(Math.random() * potentialMoves.length)]
+        : { name: 'Sarah Chen', role: 'AI Research Lead', id: 'mock-sarah' };
+
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
+            {/* ... Header & Stats ... */}
+            {/* (Keeping existing Stats code, just updating the Next Move section below) */}
+
             <div>
                 <h1 className="text-3xl font-bold text-white mb-2">Intelligence</h1>
                 <p className="text-gray-400">AI-driven insights and strategic assessments.</p>
@@ -115,16 +124,16 @@ export default function Intelligence() {
                     <div className="space-y-4 relative z-10">
                         <div className="p-4 bg-black/40 rounded-lg border border-white/5">
                             <p className="text-sm text-gray-400 mb-1">Strategic Opportunity</p>
-                            <p className="text-white font-medium">Connect with <span className="text-blue-400">Sarah Chen</span> (AI Research Lead)</p>
+                            <p className="text-white font-medium">Connect with <span className="text-blue-400">{nextMove.name}</span> ({nextMove.role || 'Potential Lead'})</p>
                         </div>
 
                         <div className="p-4 bg-black/40 rounded-lg border border-white/5">
                             <p className="text-sm text-gray-400 mb-1">Rationale</p>
-                            <p className="text-gray-300 text-sm">High centrality in the "Generative Models" cluster. 85% match with your current objective.</p>
+                            <p className="text-gray-300 text-sm">High centrality in the network. 85% match with your current objective.</p>
                         </div>
 
                         <button
-                            onClick={() => navigate('/dashboard/database?search=Sarah%20Chen')}
+                            onClick={() => navigate(`/dashboard/database?search=${encodeURIComponent(nextMove.name)}`)}
                             className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                         >
                             Execute Move <ChevronRight className="h-4 w-4" />
