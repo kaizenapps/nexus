@@ -14,12 +14,12 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                 {/* Header */}
                 <div className="p-6 border-b border-white/10 flex items-start justify-between">
                     <div>
-                        <h2 className="text-2xl font-bold text-foreground">{node.label}</h2>
-                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium mt-2 ${node.type === 'person' ? 'bg-blue-500/20 text-blue-400' :
-                            node.type === 'company' ? 'bg-red-500/20 text-red-400' :
+                        <h2 className="text-2xl font-bold text-foreground">{node.name || node.label}</h2>
+                        <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium mt-2 ${node.group === 'person' ? 'bg-blue-500/20 text-blue-400' :
+                            node.group === 'company' ? 'bg-red-500/20 text-red-400' :
                                 'bg-green-500/20 text-green-400'
                             }`}>
-                            {node.type.toUpperCase()}
+                            {(node.group || 'unknown').toUpperCase()}
                         </span>
                     </div>
                     <button onClick={onClose} className="text-muted-foreground hover:text-foreground">
@@ -38,7 +38,7 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                     )}
 
                     {/* Mock Details based on type */}
-                    {node.type === 'person' && (
+                    {node.group === 'person' && (
                         <div className="space-y-4">
                             <div className="flex items-center text-muted-foreground">
                                 <Building className="h-5 w-5 mr-3" />

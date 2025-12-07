@@ -1,58 +1,216 @@
-import { Database, Link, CheckCircle, Plus } from "lucide-react";
+import { useState } from "react";
+import { Upload, FileText, Database, CheckCircle, AlertCircle } from "lucide-react";
+import { useData, Node } from "../context/DataContext";
 
 export default function DataSources() {
-    return (
-        <div className="p-8 h-full overflow-y-auto bg-[#0B1120]">
-            <h1 className="text-3xl font-bold text-white mb-2">Data Sources</h1>
-            <p className="text-gray-400 mb-8 max-w-2xl">
-                Connect external APIs and databases to enrich the social graph.
-                Nexus uses these sources to find emails, employment history, and company details.
-            </p>
+    const { addNodes } = useData();
+    const [dragActive, setDragActive] = useState(false);
+    const [uploadStatus, setUploadStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [message, setMessage] = useState("");
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* Hunter.io */}
-                <div className="glass-panel p-6 rounded-xl border border-white/10 relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
-                        <div className="h-6 w-6 rounded-full border border-green-500/50 flex items-center justify-center">
-                            <CheckCircle className="h-4 w-4 text-green-500" />
+    const handleDrag = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.type === "dragenter" || e.type === "dragover") {
+            setDragActive(true);
+        } else if (e.type === "dragleave") {
+            setDragActive(false);
+        }
+    };
+
+    const parseCSV = (text: string) => {
+        const lines = text.split('\n');
+        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+
+        const nodes: Node[] = [];
+
+        // Detect type based on headers
+        const isAccount = headers.includes('billingAddressCity');
+        const isContact = headers.includes('firstName');
+
+        for (let i = 1; i < lines.length; i++) {
+            if (!lines[i].trim()) continue;
+
+            // Simple split by comma, handling quotes is harder without a library but let's try a basic regex split
+            // This regex splits by comma but ignores commas inside quotes
+            const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+
+            if (!row) continue;
+
+            // Map row to object
+            const data: any = {};
+            row.forEach((val, index) => {
+                if (index < headers.length) {
+                    data[headers[index]] = val.replace(/^"|"$/g, '');
+                }
+            });
+
+            if (data.id) {
+                if (isAccount) {
+                    nodes.push({
+                        id: data.id,
+                        name: data.name || 'Unknown Company',
+                        group: 'company',
+                        val: 25,
+                        ...data
+                    });
+                } else if (isContact) {
+                    const fullName = `${data.firstName || ''} ${data.lastName || ''}`.trim() || data.name;
+                    nodes.push({
+                        id: data.id,
+                        name: fullName,
+                        group: 'person',
+                        val: 15,
+                        ...data
+                    });
+                }
+            }
+        }
+        return nodes;
+    };
+
+    const handleDrop = async (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragActive(false);
+
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+            await processFile(e.dataTransfer.files[0]);
+        }
+    };
+
+    const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        e.preventDefault();
+        if (e.target.files && e.target.files[0]) {
+            await processFile(e.target.files[0]);
+        }
+    };
+
+    const processFile = async (file: File) => {
+        if (file.type !== "text/csv" && !file.name.endsWith('.csv')) {
+            setUploadStatus('error');
+            setMessage("Please upload a valid CSV file.");
+            return;
+        }
+
+        try {
+            const text = await file.text();
+            const newNodes = parseCSV(text);
+            addNodes(newNodes);
+            setUploadStatus('success');
+            setMessage(`Successfully imported ${newNodes.length} nodes from ${file.name}`);
+        } catch (error) {
+            console.error(error);
+            setUploadStatus('error');
+            setMessage("Failed to parse CSV file.");
+        }
+    };
+
+    return (
+        <div className="p-8 max-w-7xl mx-auto space-y-8">
+            <div>
+                <h1 className="text-3xl font-bold text-white mb-2">Data Sources</h1>
+                <p className="text-gray-400">Connect and manage your data streams.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* CSV Upload Card */}
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 bg-green-500/20 rounded-lg">
+                            <FileText className="h-6 w-6 text-green-400" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">CSV Import</h3>
+                            <p className="text-sm text-gray-400">Upload EspoCRM exports</p>
                         </div>
                     </div>
-                    <div className="h-12 w-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4 text-orange-500">
-                        <Database className="h-6 w-6" />
+
+                    <div
+                        className={`border-2 border-dashed rounded-xl p-8 text-center transition-all ${dragActive ? "border-green-500 bg-green-500/10" : "border-white/10 hover:border-white/20 hover:bg-white/5"
+                            }`}
+                        onDragEnter={handleDrag}
+                        onDragLeave={handleDrag}
+                        onDragOver={handleDrag}
+                        onDrop={handleDrop}
+                    >
+                        <Upload className="h-10 w-10 text-gray-400 mx-auto mb-4" />
+                        <p className="text-gray-300 font-medium mb-2">Drag & drop CSV file here</p>
+                        <p className="text-sm text-gray-500 mb-4">or click to browse</p>
+                        <input
+                            type="file"
+                            id="csv-upload"
+                            className="hidden"
+                            accept=".csv"
+                            onChange={handleChange}
+                        />
+                        <label
+                            htmlFor="csv-upload"
+                            className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg cursor-pointer transition-colors"
+                        >
+                            Select File
+                        </label>
                     </div>
-                    <h3 className="text-xl font-bold text-white">Hunter.io</h3>
-                    <p className="text-gray-400 text-sm mt-2 mb-4">
-                        Email verification and domain search. Used to find contact details for potential leads.
-                    </p>
-                    <div className="flex items-center text-xs text-green-400 font-mono bg-green-950/30 px-2 py-1 rounded w-fit">
-                        <span className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-                        CONNECTED
+
+                    {uploadStatus !== 'idle' && (
+                        <div className={`mt-4 p-3 rounded-lg flex items-center gap-2 ${uploadStatus === 'success' ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'
+                            }`}>
+                            {uploadStatus === 'success' ? <CheckCircle className="h-5 w-5" /> : <AlertCircle className="h-5 w-5" />}
+                            <span className="text-sm">{message}</span>
+                        </div>
+                    )}
+                </div>
+
+                {/* Database Connector Placeholder */}
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm opacity-50">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 bg-blue-500/20 rounded-lg">
+                            <Database className="h-6 w-6 text-blue-400" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">SQL Database</h3>
+                            <p className="text-sm text-gray-400">Connect directly to your DB</p>
+                        </div>
+                    </div>
+                    <div className="h-40 flex items-center justify-center border border-white/5 rounded-xl bg-black/20">
+                        <span className="text-gray-500 text-sm">Coming Soon</span>
                     </div>
                 </div>
 
-                {/* LinkedIn / Custom Scraper */}
-                <div className="glass-panel p-6 rounded-xl border border-white/10 opacity-75 hover:opacity-100 transition-all">
-                    <div className="h-12 w-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 text-blue-500">
-                        <Link className="h-6 w-6" />
+                {/* Enrichment Services */}
+                <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-orange-500/50 transition-colors cursor-pointer group">
+                        <div className="flex items-center gap-3 mb-2">
+                            <div className="h-8 w-8 rounded bg-orange-500/20 flex items-center justify-center text-orange-500 font-bold">H</div>
+                            <h3 className="text-lg font-semibold text-white">Hunter.io</h3>
+                        </div>
+                        <p className="text-sm text-gray-400 mb-4">Email verification and discovery.</p>
+                        <div className="text-xs text-green-400 flex items-center gap-1">
+                            <CheckCircle className="h-3 w-3" /> Connected
+                        </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white">LinkedIn (Apify)</h3>
-                    <p className="text-gray-400 text-sm mt-2 mb-4">
-                        Profile scraping and network connection analysis.
-                    </p>
-                    <button className="w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 text-sm font-medium transition-colors border border-white/10">
-                        Configure API Key
-                    </button>
-                </div>
 
-                {/* Add New */}
-                <div className="glass-panel p-6 rounded-xl border border-dashed border-white/10 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors cursor-pointer group">
-                    <div className="h-12 w-12 bg-white/5 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Plus className="h-6 w-6" />
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-blue-500/50 transition-colors cursor-pointer group">
+                        <div className="flex items-center gap-3 mb-2">
+                            <div className="h-8 w-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-500 font-bold">A</div>
+                            <h3 className="text-lg font-semibold text-white">Apify</h3>
+                        </div>
+                        <p className="text-sm text-gray-400 mb-4">Web scraping and automation.</p>
+                        <div className="text-xs text-green-400 flex items-center gap-1">
+                            <CheckCircle className="h-3 w-3" /> Connected
+                        </div>
                     </div>
-                    <h3 className="text-lg font-medium text-white">Add Source</h3>
-                    <p className="text-gray-500 text-xs mt-1">
-                        CSV Import, CRM, or Custom API
-                    </p>
+
+                    <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-colors cursor-pointer group opacity-75">
+                        <div className="flex items-center gap-3 mb-2">
+                            <div className="h-8 w-8 rounded bg-purple-500/20 flex items-center justify-center text-purple-500 font-bold">S</div>
+                            <h3 className="text-lg font-semibold text-white">Snov.io</h3>
+                        </div>
+                        <p className="text-sm text-gray-400 mb-4">Cold outreach automation.</p>
+                        <div className="text-xs text-gray-500 flex items-center gap-1">
+                            Coming Soon
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

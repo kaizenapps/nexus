@@ -22,12 +22,13 @@ export default function GraphCanvas({ onNodeClick, data }: GraphCanvasProps) {
                         graphData={data}
                         nodeLabel="label"
                         nodeColor={(node: any) => {
-                            if (node.type === 'person') return '#3b82f6';
-                            if (node.type === 'company') return '#ef4444';
-                            if (node.type === 'event') return '#10b981';
+                            const group = node.group || node.type;
+                            if (group === 'person') return '#3b82f6';
+                            if (group === 'company') return '#ef4444';
+                            if (group === 'event') return '#10b981';
                             return '#9ca3af';
                         }}
-                        nodeRelSize={6}
+                        nodeRelSize={4}
                         linkColor={() => 'rgba(255,255,255,0.2)'}
                         backgroundColor="#0B1120"
                         onNodeClick={(node) => {

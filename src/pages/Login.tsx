@@ -23,6 +23,11 @@ export default function Login() {
         <div className="flex min-h-screen items-center justify-center bg-background">
             <div className="w-full max-w-md space-y-8 p-8 glass-panel rounded-xl">
                 <div className="text-center">
+                    <div className="flex justify-center mb-8">
+                        <div className="h-16 w-16 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 backdrop-blur-xl shadow-2xl">
+                            <img src="/Nexus_Logo.png" alt="Nexus" className="h-10 w-10 object-contain" />
+                        </div>
+                    </div>
                     <h2 className="text-3xl font-bold tracking-tight text-foreground">
                         Nexus Intelligence
                     </h2>
