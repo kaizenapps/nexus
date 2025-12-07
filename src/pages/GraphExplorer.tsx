@@ -58,7 +58,7 @@ export default function GraphExplorer() {
     return (
         <div className="h-full w-full relative bg-[#0B1120]">
             <div className="absolute inset-0">
-                <GraphCanvas onNodeClick={setSelectedNode} data={graphData} />
+                <GraphCanvas onNodeClick={setSelectedNode} data={graphData} searchTerm={objective} />
             </div>
 
             {selectedNode && (
@@ -79,12 +79,17 @@ export default function GraphExplorer() {
                         className="bg-transparent border-none focus:ring-0 text-white text-lg w-full placeholder:text-gray-500 h-10 font-medium"
                         disabled={isLoading}
                     />
+
+                    {/* Toggle Button */}
                     <button
                         onClick={() => {
-                            if (!isObjectiveMode) {
+                            if (isObjectiveMode) {
+                                // If mode is on, toggle it OFF
+                                setIsObjectiveMode(false);
+                                setObjective(""); // Clear search when toggling off
+                            } else {
+                                // If mode is off, toggle it ON
                                 setIsObjectiveMode(true);
-                            } else if (objective.trim()) {
-                                handleAnalyze();
                             }
                         }}
                         className={`px-4 py-2 rounded-lg text-sm font-bold transition-all duration-200 border-2 flex items-center gap-2 ${isObjectiveMode
@@ -93,8 +98,19 @@ export default function GraphExplorer() {
                             }`}
                     >
                         <Sparkles className="h-4 w-4" />
-                        {isObjectiveMode ? "Run Agent" : "Enable Agent"}
+                        {isObjectiveMode ? "Nexus Mode" : "Enable Agent"}
                     </button>
+
+                    {/* Run Button (Only visible in Nexus Mode) */}
+                    {isObjectiveMode && (
+                        <button
+                            onClick={handleAnalyze}
+                            disabled={!objective.trim() || isLoading}
+                            className="px-4 py-2 rounded-lg text-sm font-bold bg-blue-600 text-white hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        >
+                            Run
+                        </button>
+                    )}
                 </div>
             </div>
         </div>

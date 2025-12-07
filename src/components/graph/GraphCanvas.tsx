@@ -11,9 +11,10 @@ interface GraphData {
 interface GraphCanvasProps {
     onNodeClick?: (node: any) => void;
     data?: GraphData;
+    searchTerm?: string;
 }
 
-export default function GraphCanvas({ onNodeClick, data }: GraphCanvasProps) {
+export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: GraphCanvasProps) {
     const [hoverNode, setHoverNode] = useState<any>(null);
 
     const handleNodeHover = useCallback((node: any) => {
@@ -28,11 +29,13 @@ export default function GraphCanvas({ onNodeClick, data }: GraphCanvasProps) {
                         graphData={data}
                         nodeLabel="" // Disable default label to use custom tooltip
                         nodeColor={(node: any) => {
-                            const group = node.group || node.type;
-                            if (group === 'person') return '#3b82f6';
-                            if (group === 'company') return '#ef4444';
-                            if (group === 'event') return '#10b981';
-                            return '#9ca3af';
+                            const isMatch = !searchTerm || (node.name && node.name.toLowerCase().includes(searchTerm.toLowerCase()));
+                            const baseColor =
+                                node.group === 'person' ? '#3b82f6' :
+                                    node.group === 'company' ? '#ef4444' :
+                                        node.group === 'event' ? '#10b981' : '#9ca3af';
+
+                            return isMatch ? baseColor : 'rgba(255, 255, 255, 0.1)'; // Dim non-matches
                         }}
                         nodeRelSize={2}
                         linkColor={() => 'rgba(255,255,255,0.2)'}
