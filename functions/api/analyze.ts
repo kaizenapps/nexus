@@ -22,7 +22,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       
       Generate a JSON object representing a social graph that helps achieve this objective.
       The graph should include:
-      - "nodes": Array of objects with { "id": string, "label": string, "type": "person" | "company" | "event", "desc": string }
+      - "nodes": Array of objects with { "id": string, "name": string, "group": "person" | "company" | "event", "description": string }
       - "links": Array of objects with { "source": string, "target": string, "type": string }
       
       Create at least 5-8 relevant nodes (mix of people, companies, events).

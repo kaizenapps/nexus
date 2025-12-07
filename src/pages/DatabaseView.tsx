@@ -3,7 +3,7 @@ import { useData } from "../context/DataContext";
 import { Search, ArrowUpDown, Filter } from "lucide-react";
 
 export default function DatabaseView() {
-    const { graphData } = useData();
+    const { graphData, addNodes } = useData();
     const [searchTerm, setSearchTerm] = useState("");
     const [sortConfig, setSortConfig] = useState<{ key: string; direction: 'asc' | 'desc' } | null>(null);
 
@@ -53,6 +53,23 @@ export default function DatabaseView() {
                     <button className="p-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 hover:text-white hover:bg-white/10">
                         <Filter className="h-5 w-5" />
                     </button>
+                    <button
+                        onClick={() => {
+                            const name = prompt("Enter node name:");
+                            if (name) {
+                                addNodes([{
+                                    id: `manual-${Date.now()}`,
+                                    name,
+                                    group: "person",
+                                    val: 20,
+                                    description: "Manually added"
+                                }]);
+                            }
+                        }}
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
+                    >
+                        + Add Node
+                    </button>
                 </div>
             </div>
 
@@ -77,9 +94,9 @@ export default function DatabaseView() {
                                     <td className="p-4 text-white font-medium">{node.name}</td>
                                     <td className="p-4">
                                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${node.group === 'person' ? 'bg-blue-500/20 text-blue-300' :
-                                                node.group === 'company' ? 'bg-purple-500/20 text-purple-300' :
-                                                    node.group === 'event' ? 'bg-orange-500/20 text-orange-300' :
-                                                        'bg-gray-500/20 text-gray-300'
+                                            node.group === 'company' ? 'bg-purple-500/20 text-purple-300' :
+                                                node.group === 'event' ? 'bg-orange-500/20 text-orange-300' :
+                                                    'bg-gray-500/20 text-gray-300'
                                             }`}>
                                             {(node.group || 'UNKNOWN').toUpperCase()}
                                         </span>

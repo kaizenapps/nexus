@@ -81,9 +81,9 @@ export default function Dashboard() {
                     />
                     <button
                         onClick={() => {
-                            const newMode = !isObjectiveMode;
-                            setIsObjectiveMode(newMode);
-                            if (newMode && objective.trim()) {
+                            if (!isObjectiveMode) {
+                                setIsObjectiveMode(true);
+                            } else if (objective.trim()) {
                                 handleAnalyze();
                             }
                         }}

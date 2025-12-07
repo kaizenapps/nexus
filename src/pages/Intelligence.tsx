@@ -1,6 +1,9 @@
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Intelligence() {
+    const navigate = useNavigate();
+
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
             <div>
@@ -63,7 +66,7 @@ export default function Intelligence() {
                         </div>
 
                         <button
-                            onClick={() => window.location.href = '/dashboard/database?search=Sarah%20Chen'}
+                            onClick={() => navigate('/dashboard/database?search=Sarah%20Chen')}
                             className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                         >
                             Execute Move <ChevronRight className="h-4 w-4" />
