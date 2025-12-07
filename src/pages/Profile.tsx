@@ -1,14 +1,60 @@
+import { useState, useEffect, useRef } from 'react';
+import { Camera } from 'lucide-react';
+
 export default function Profile() {
+    const [profileImage, setProfileImage] = useState<string | null>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        const savedImage = localStorage.getItem('nexus_profile_photo');
+        if (savedImage) {
+            setProfileImage(savedImage);
+        }
+    }, []);
+
+    const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const file = event.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const base64String = reader.result as string;
+                setProfileImage(base64String);
+                localStorage.setItem('nexus_profile_photo', base64String);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     return (
         <div className="p-8 h-full overflow-y-auto bg-[#0B1120] flex flex-col items-center">
             <div className="w-full max-w-4xl">
                 <div className="relative h-48 rounded-xl bg-gradient-to-r from-blue-900 to-purple-900 mb-16 border border-white/10">
-                    <div className="absolute -bottom-12 left-8 flex items-end">
-                        <div className="h-32 w-32 rounded-full bg-black border-4 border-[#0B1120] flex items-center justify-center overflow-hidden">
-                            <div className="h-full w-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-3xl font-bold text-white">
-                                PZ
+                    <div className="absolute -bottom-12 left-8 flex items-end group">
+                        <div
+                            className="h-32 w-32 rounded-full bg-black border-4 border-[#0B1120] flex items-center justify-center overflow-hidden cursor-pointer relative"
+                            onClick={() => fileInputRef.current?.click()}
+                        >
+                            {profileImage ? (
+                                <img src={profileImage} alt="Profile" className="h-full w-full object-cover" />
+                            ) : (
+                                <div className="h-full w-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-3xl font-bold text-white">
+                                    PZ
+                                </div>
+                            )}
+
+                            {/* Overlay on hover */}
+                            <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <Camera className="h-8 w-8 text-white" />
                             </div>
                         </div>
+                        <input
+                            type="file"
+                            ref={fileInputRef}
+                            onChange={handleImageUpload}
+                            accept="image/*"
+                            className="hidden"
+                        />
+
                         <div className="mb-4 ml-4">
                             <h1 className="text-3xl font-bold text-white">Preston Zen</h1>
                             <p className="text-gray-400">Founder @ Kaizen Apps</p>

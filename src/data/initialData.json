@@ -1,0 +1,6711 @@
+{
+  "nodes": [
+    {
+      "id": "68eb89e5840960fd8",
+      "name": "llywodraeth cymru welsh government",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e21f33a145",
+      "name": "Brave1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e207550f94",
+      "name": "Ministry of Digital Transformation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "diia.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e1f01b7786",
+      "name": "Lviv Polytechnic University",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "lpnu.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e1d81b6cb2",
+      "name": "Tech Startup School",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "techstartupschool.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e1bff5595d",
+      "name": "KSE Graduate Business School",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "kse.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e1a87b11a0",
+      "name": "reface.ai",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "reface.ai",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e19032581e",
+      "name": "reface.ai",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "reface.ai",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e177b6dd70",
+      "name": "Northern Defence Investment Horizon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "www.nodih.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e15f72070b",
+      "name": "Northern Defence Investment Horizon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "www.nodih.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e146e9b5ef",
+      "name": "Northern Defence Investment Horizon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "www.nodih.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e12e1e0fdd",
+      "name": "Northern Defence Investment Horizon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "www.nodih.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e1153c5559",
+      "name": "Innovation Development Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "usf.com.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e0fcf6925b",
+      "name": "Brave1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "testinukraine.brave1.tech",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e0dd5f6d77",
+      "name": "Ukrainian Startup Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "usf.com.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e0c3077028",
+      "name": "Brave1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "brave1.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e0a7a3dea4",
+      "name": "Brave1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "brave1.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e08c90aec8",
+      "name": "Ministry of Digital Transformation of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "diia.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e071e5795d",
+      "name": "Ukrainian Startup Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "usf.com.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e057fe6fd2",
+      "name": "Ministry of Digital Transformation of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "diia.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e03d918c67",
+      "name": "Nodih",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "www.nodih.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015e021e33d50",
+      "name": "Brave1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "brave1.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb015df40cfc1f8",
+      "name": "Ukrainian Startup Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "usf.com.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc189495cefbf",
+      "name": "Łukasiewicz Research Network",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18927a7279e",
+      "name": "Zv'yazok Media",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18905fbcd06",
+      "name": "Zubr Capital",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc188e480d15e",
+      "name": "Zoritek",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc188c314510e",
+      "name": "Zmiyar",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc188a18b43b6",
+      "name": "Zir System",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1887ffa8203",
+      "name": "Zhytomyr UGV",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1885e57cc94",
+      "name": "Zbroyari Defense (defense cluster)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1883c1d5408",
+      "name": "Yara Guard",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1881a72cac8",
+      "name": "X1 Jet",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc187f8871cb0",
+      "name": "WIY Advanced Aerial Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc187d719bbe6",
+      "name": "White Dance",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc187b56fb4a2",
+      "name": "Weibel Scientific",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1879356d47c",
+      "name": "Vvryi Drone",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18771e9fcab",
+      "name": "Vluchnyk",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18750300b1b",
+      "name": "Vilni Solutions",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1872e44bfec",
+      "name": "Vidar Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1870c3754c8",
+      "name": "Vgurobotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc186ea587291",
+      "name": "Vermeer",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc186c81f069a",
+      "name": "Vataga Drone",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc186a66e2db8",
+      "name": "Varta Dronehunter",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18684c90d76",
+      "name": "Vantage Drone Technologies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18662934c69",
+      "name": "UYRIB-1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1863fede74c",
+      "name": "UVCA",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1861cacca3e",
+      "name": "USSC Development",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc185f6924a3e",
+      "name": "Urasid",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc185cd66d9a6",
+      "name": "Unwave",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc185abfbc119",
+      "name": "Unity Ventures",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1858a76498a",
+      "name": "United Cyber Alliance",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18567fb7fd4",
+      "name": "UMP",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18545f1ad99",
+      "name": "Ukrtelecom",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18523d76057",
+      "name": "UkrSpecSystems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc184fc378ccc",
+      "name": "UkrSpecConsulting",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc184d3ce3946",
+      "name": "Ukropter",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc184b09a5900",
+      "name": "Ukrgasbank",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1848e9373c1",
+      "name": "Ukrainian Veterans Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1846b2990a2",
+      "name": "Ukrainian Venture Capital and Private Equity Association",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc184472bf590",
+      "name": "Ukrainian Tech Ecosystem",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc184225d7413",
+      "name": "Ukrainian Startpu Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc183ff7569e1",
+      "name": "Ukrainian Startup Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc183dd2692ea",
+      "name": "Ukrainian Navy",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc183bb88ac11",
+      "name": "Ukrainian Legal Advisory Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1839a1cde20",
+      "name": "Ukrainian League of Industrialists and Enterprenuers (USPP)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18378f3ddca",
+      "name": "Ukrainian Drone Industry",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1835775475c",
+      "name": "Ukrainian Defense Industry JSC",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1833604b148",
+      "name": "Ukraine Smart Solutions Centre",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18314608953",
+      "name": "Ukraine Reconstruction Business Support Center",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc182f1279a70",
+      "name": "Ukranian Armed Forces",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc182cfed0de3",
+      "name": "UGV Laboratory",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc182ae9473d3",
+      "name": "UEDF",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1826a4d5bfb",
+      "name": "UAVanguard",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1824840a043",
+      "name": "UAV Robotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc182263b0318",
+      "name": "UAV Navigation Grupo Oesia",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc182048ae147",
+      "name": "UADamage",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc181e2d67495",
+      "name": "UACranes Pty Ltd",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc181c195a361",
+      "name": "U-Force",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc181a03b1adb",
+      "name": "Twist Robotics Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1817f080601",
+      "name": "Tritel",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1815ddcf311",
+      "name": "Triniti Robotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1813cba39db",
+      "name": "Trade Center",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1811abf4502",
+      "name": "TInstrum",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc180f91e31dd",
+      "name": "The Fourth Law",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc180d7c6ff06",
+      "name": "Tencore",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc180b6630ae5",
+      "name": "Teletactica",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc180951b19fe",
+      "name": "Techprogresstrade",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc180738587f9",
+      "name": "TechUkraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc18052066cd3",
+      "name": "Techex",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1800c765cc4",
+      "name": "Tech Startup School",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "lpnu.ua/tsus",
+      "description": "Partners with Kaizen Labs"
+    },
+    {
+      "id": "68eafc17f2d2ecdc5",
+      "name": "Tank Bureau",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17f0bc0ff1d",
+      "name": "TAF Industries",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17ee9c01c10",
+      "name": "Swarmer",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17ec74c62ae",
+      "name": "Sumyspetspostavka",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17ea399a756",
+      "name": "Stetman",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17e7e2f92c3",
+      "name": "Steelfront Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17e5d2445bb",
+      "name": "State Authority for Military and Industrial Complex of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17e3c0bd60c",
+      "name": "State Agency of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17e18ed96df",
+      "name": "Stark",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17df3799567",
+      "name": "Spextr",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17dcf0e58aa",
+      "name": "Special communications",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17daae36156",
+      "name": "Special Communications and Information Protection Service of Ukraine (SSSCIP)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17d863f7f5d",
+      "name": "SOVA Technologies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17d621850a8",
+      "name": "Soldiers for Hope - Worldwide",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17d3df3a97f",
+      "name": "Solar Air",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17d19c232ae",
+      "name": "Snake Island Institute",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17cf67cf90e",
+      "name": "Smartnova",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17cd333f26f",
+      "name": "Skylum Software",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17cafbbe9ee",
+      "name": "SkyRiper",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17c8caebba0",
+      "name": "Skygrids",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17c69b48b70",
+      "name": "Skyfall",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17c44e45df4",
+      "name": "Skyeton",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17c20808c3a",
+      "name": "Sky Assist",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17bfce815bb",
+      "name": "Skiftech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17bd9f7f8ef",
+      "name": "Sine Engineering",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17bb6e49033",
+      "name": "Simple-Kit",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17b923b8af8",
+      "name": "Silvus Technologies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17b6d4a2385",
+      "name": "Sikorsky Challenge Incubator",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17b4a661232",
+      "name": "Siderunner",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17b278ef596",
+      "name": "Shersh",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17b0462985c",
+      "name": "Serotonin Hacking",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17ae1369022",
+      "name": "Serhiy Prytula Charity Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17abd5dc7cb",
+      "name": "Sea drones solutions",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17a9a48076f",
+      "name": "Scylon Technology Limited",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17a76fd1503",
+      "name": "Savada",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17a54135f55",
+      "name": "Salutem",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17a3077781e",
+      "name": "SACSA",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17a0d8e5ddc",
+      "name": "Rovertech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc179ea31ee88",
+      "name": "Roboneers",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc179c7353ebf",
+      "name": "Rise Technologies Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc179a3a51883",
+      "name": "Remtechnology",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17980fede05",
+      "name": "reface.ai",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1795f0abb10",
+      "name": "Ratel",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1793d2400c9",
+      "name": "Quantum International Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1791b24d0f6",
+      "name": "Prytula Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc178f8c13f54",
+      "name": "Prusa Research",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc178d6b2956d",
+      "name": "Proton",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc178b4205232",
+      "name": "Protas",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc178912a7c46",
+      "name": "Promethion Industries Berlin",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1786dfc7f05",
+      "name": "Private Investor",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1784c23998a",
+      "name": "Povernerms",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1782a8706e3",
+      "name": "Polish-Ukrainian Chamber of Commerce",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17808d44007",
+      "name": "Polaris Technology",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc177e7117fcd",
+      "name": "Plain Aero",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc177c3ee4f37",
+      "name": "Perun",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc177a1092cee",
+      "name": "Pegasus Arms",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1777e0068a8",
+      "name": "Pedigree Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1775bab546b",
+      "name": "Pawell Power",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17739b62aeb",
+      "name": "Parrot Drones",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17717eb81b1",
+      "name": "Palladin Drones",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc176f30256ff",
+      "name": "Owl Tech Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc176b4c1132a",
+      "name": "Orbotix",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1769179ec4b",
+      "name": "Omela",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1765fef1a05",
+      "name": "Omelas",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1763cb98d0b",
+      "name": "Oko Camera",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc176193b5d8d",
+      "name": "OCHA",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc175f57def11",
+      "name": "Objective Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc175d1fb3011",
+      "name": "Northern Defense Investment Horizon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc175ae0a0794",
+      "name": "Norda Dynamics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc175657595ac",
+      "name": "NMG Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17541f779a1",
+      "name": "Niemi Services Ltd",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc174f4c04188",
+      "name": "Newforces Technology Park",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc174d12144e2",
+      "name": "Neros Inc",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc174ad86a9c1",
+      "name": "Neon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17489d89fc6",
+      "name": "Nejet",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17466114b67",
+      "name": "Nect",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1744275f690",
+      "name": "NATO DEEP eAcademy",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1741eb0ee8b",
+      "name": "National Technical University of Ukraine (KPI)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc173f9a41e63",
+      "name": "National Bank of Ukraine NBU",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc173d520c7b8",
+      "name": "Myloserddya",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc173b0b929e9",
+      "name": "MyDefence",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1738cdf89be",
+      "name": "Murena System",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1736996e5d0",
+      "name": "Mriya 4.5.0",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc173465fbe43",
+      "name": "MPS",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc173231f2953",
+      "name": "Move One",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc172ffac7700",
+      "name": "Monobank",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc172dc65f6ce",
+      "name": "Molfar",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc172b90a68ad",
+      "name": "Moby Holding Corp",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17293ad2654",
+      "name": "Mixsteel",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17270197d97",
+      "name": "Ministry of Strategic Industries of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1724a3fefd8",
+      "name": "Ministry of Education and Science of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17226e1f85c",
+      "name": "Ministry of Digital Transformation of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc171de4c0fd9",
+      "name": "Ministry of Defense of Ukraine (International Cooperation Dept)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc171bac90320",
+      "name": "Ministry of Defense of Ukraine (Department for Experimental Development)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc171723cb236",
+      "name": "Ministry of Defense of Serbia",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1714e7111b0",
+      "name": "Military",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1712ae6e9f1",
+      "name": "Milkor",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17109367fc1",
+      "name": "Midgard Dynamics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc170e3c8954c",
+      "name": "Mauka Technology",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc170bfe28044",
+      "name": "Mathesis",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1709c4d680e",
+      "name": "Manufacturing of Rubber Products and Components for Machinery",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc17078862600",
+      "name": "Magicians' Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc170555c5cb7",
+      "name": "LynkSpiders Technologies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1703252d07a",
+      "name": "LvBS",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1700f17200f",
+      "name": "Lviv Tech Angels Club / Global Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16f2def16d1",
+      "name": "Lviv Polytechnic University",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16f0a776e22",
+      "name": "Lviv Media Forum",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16ee7336c09",
+      "name": "Lviv IT Cluster",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16ec3f98a1b",
+      "name": "LUN Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16ea0f50c27",
+      "name": "Logics 7",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16e7dbee95c",
+      "name": "Lehan",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16e5a82ed73",
+      "name": "Latent AI",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16e36cfccf0",
+      "name": "LaunchpadUA",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16e130ec246",
+      "name": "KyPartners Attorneys and Counselors at Law",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16def8546fe",
+      "name": "Kyiv Polytechnic Institute",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16dcc269f74",
+      "name": "Kyiv City Council",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16d831cf2c9",
+      "name": "Kvantum Technologies AS",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16d5fa05f27",
+      "name": "Kvertus",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16d3c537036",
+      "name": "Kryptech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16d189024f9",
+      "name": "KryptTech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16cf4fc9569",
+      "name": "Kray",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16cd0bdcf87",
+      "name": "Kharkiv IT CLUSTER",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16cace85b4f",
+      "name": "Kennan Institute / Wilson Center",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16c89b4457c",
+      "name": "Kara Dag Technologies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16c6626b8df",
+      "name": "Jet",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16c42bb2725",
+      "name": "Iron Belly",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16c1d263b76",
+      "name": "International UAV Committee",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16bee886e9f",
+      "name": "International Centre for Defence and Security",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16bcd410127",
+      "name": "International Aviation Cluster of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16bac13dbfe",
+      "name": "IntegraSys",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16b8ad9c4e8",
+      "name": "Institute of Hygiene Ecology and Sanitation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16b69c0f12a",
+      "name": "Inspiring Sky",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16b4888d341",
+      "name": "Innateks",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16b275899f8",
+      "name": "Infozahyst",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16b063fce40",
+      "name": "Infopulse",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16ae518d9ab",
+      "name": "Indigo Protect Solutions",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16ac390d28c",
+      "name": "INTEL Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16aa26a17f6",
+      "name": "INDUSTRIAL BUREAU UGVs",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16a8128c581",
+      "name": "Hurkit Engineering",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16a60031ecf",
+      "name": "Huless",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16a3edfe612",
+      "name": "Hospitallers",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16a1dd05942",
+      "name": "Horizon Investments",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc169fcd955f5",
+      "name": "Himera",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc169dbafdb09",
+      "name": "HESTIA Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc169ba4864fc",
+      "name": "H2L Robotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc169990319f7",
+      "name": "Gurzuf Defence",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc169770487d8",
+      "name": "GRES (Part of the UA Army)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc169553f5b52",
+      "name": "Greenwood Point Ventures",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16933d57725",
+      "name": "Greenstone Capital / Kharkiv IT CLUSTER",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16912769205",
+      "name": "Greek Defense Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc168f0c9fac9",
+      "name": "Global Reach Alliance",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc168cf3c7650",
+      "name": "Gidra",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc168ad79c49f",
+      "name": "Gesheft 2022",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1688b9a7acc",
+      "name": "General Cherry",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16869e28104",
+      "name": "Gava UAV",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16847dd6459",
+      "name": "Gasgeneratorbau",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16826459d0c",
+      "name": "Fulltime Robotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16804a93d00",
+      "name": "Frontline",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc167e362845d",
+      "name": "FRDM",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc167c1f764d6",
+      "name": "Franke Family Enterprises",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc167a0b35bfc",
+      "name": "Frakkefabrikken",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1677f3913b4",
+      "name": "Foundation.WORLD",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1675dc7f9cf",
+      "name": "FlyingBOX Defense",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1673be355a6",
+      "name": "Flyfish",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1671a441364",
+      "name": "Fit Additive Manufacturing Group in Germany",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc166f8d5d61e",
+      "name": "Firefly",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc166d785b501",
+      "name": "Farsight Vision",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc166b611b1e4",
+      "name": "Falcom",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc166943b38ae",
+      "name": "EverGrove Solutions & TridentForward",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1667247659e",
+      "name": "European Defense Tech Hub",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16650db74a7",
+      "name": "Ethereum Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1662f7d6ab8",
+      "name": "Electronic Warfare",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1660e0f1edd",
+      "name": "Edgecloud Defence Connected Autonomy",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc165eca5468b",
+      "name": "ELEKS",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc165cb0ba07d",
+      "name": "EKIP",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc165a997ef36",
+      "name": "Dymy",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16588395e85",
+      "name": "Dutch Defence Cluster",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16566896ffd",
+      "name": "Drohobych District Administration",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16544e840ec",
+      "name": "Dropla Tech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1652361270a",
+      "name": "Dronopro / Geopro",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc165021d5a9b",
+      "name": "Drobot",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc164df7ebefb",
+      "name": "Drone Nerds",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc164bd7efdba",
+      "name": "DroneUA Ground Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1649bf54016",
+      "name": "Drone.ua",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1647a231622",
+      "name": "Dolya & Co.",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16455edb394",
+      "name": "Dignitas Fund",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1643123612a",
+      "name": "Devdroid",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1640d227886",
+      "name": "Desfencitel Solutions",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc163e8fe8f14",
+      "name": "Delta",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc163c5afd90d",
+      "name": "Degree-Trans",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc163a1b5f268",
+      "name": "Deftak",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1637d83410c",
+      "name": "Defense Tech for Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16359b0d774",
+      "name": "Defense Express - media and consulting agency",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16336031a99",
+      "name": "Defence Builder",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc163129cc971",
+      "name": "Dec1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc162ef28ac4a",
+      "name": "Danish Ukrainian business Council",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc162cbd24e8f",
+      "name": "DIYA.Business",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc162a84a8e24",
+      "name": "DIYA",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc162842b3526",
+      "name": "DH",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1625c176d0e",
+      "name": "DOD Solution",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc162310da729",
+      "name": "Cyqlon",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1620c422e4c",
+      "name": "Come Back Alive Foundation",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc161e96b0f0c",
+      "name": "Combat Simulation Industries",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc161c7745e6e",
+      "name": "Columbia University",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc161a6270e28",
+      "name": "College of Europe",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc161849fe40d",
+      "name": "Coalas",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16162aa123d",
+      "name": "Clarity",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16140327e8b",
+      "name": "Center for Defence Strategies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1611de63b7f",
+      "name": "CAFA Tech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc160fba446d3",
+      "name": "Burevii",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc160d94670af",
+      "name": "Buntar Aerospace",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc160b5f79ba3",
+      "name": "BTRY. Energy",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc1609287d701",
+      "name": "Bravo Dynamics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16049502156",
+      "name": "Bodya UGV Developer and Manufacturer",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16027cd22b0",
+      "name": "Bluebird",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc16005f5e15a",
+      "name": "Blue Arrow",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15f26e291aa",
+      "name": "Black Forest Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15f053fa6ed",
+      "name": "Besomar",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15ee38b13fb",
+      "name": "Barragier",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15ec1a5cfa4",
+      "name": "Baker McKenzie",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15ea0007fed",
+      "name": "Awedyne",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15e7e947868",
+      "name": "Aviation New Technologies",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15e5d12619f",
+      "name": "Autonomous Engineering R&D Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15e3b529e48",
+      "name": "Atreyd",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15e1a24bf5a",
+      "name": "Atmaraksi",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15df86f2b7c",
+      "name": "Athena ISR",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15dd6a11308",
+      "name": "Asymmetrica",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15db49c5f82",
+      "name": "Arrowline Security Pty Ltd",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15d931604bb",
+      "name": "Armor Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15d71819b4a",
+      "name": "Armour F.AI",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15d503a7544",
+      "name": "Arbigas Public Affairs",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15d2e773faf",
+      "name": "Anduril",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15d0cad3b20",
+      "name": "Amrop",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15ceaf8b420",
+      "name": "Amazing Drones",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15cc8d5566c",
+      "name": "Alta Ares",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15ca76ea761",
+      "name": "Alfatec Group",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15c85a3f57e",
+      "name": "Alcom Capital Partners / Kyiv School of Economics (KSE)",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15c63e23ee1",
+      "name": "Aku Tech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15c418107f2",
+      "name": "Airlift Tactical",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15bfb9482ea",
+      "name": "Airlogix",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15bd9ddc7da",
+      "name": "Airdroper",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15bb85a7ea4",
+      "name": "Ailand Systems",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15b96853ba3",
+      "name": "Aero Center",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15b74d45a30",
+      "name": "ARX Robotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15b53547632",
+      "name": "ARK Robotics",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15b31938fbd",
+      "name": "ANG Patriot Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15b0fdbad58",
+      "name": "AI Autonomix",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15aee058e4f",
+      "name": "3DTech",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15acbe45da7",
+      "name": "2UxU",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eafc15aa1680d2b",
+      "name": "2021 Solutions",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae94f3e54a1fb8",
+      "name": "Taiwan Trade Center",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "kyiv.taiwantrade.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae67695a861cce",
+      "name": "Виготовлення та продаж пружин",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae36c10ba73095",
+      "name": "Combat Vision",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "combat.vision",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae2b99e0ee2474",
+      "name": "Ministry of Defense of Ukraine",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "mod.gov.ua/en",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae234f295c770a",
+      "name": "Nodih",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "www.nodih.com",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae1b3a2ee994d5",
+      "name": "Brave1",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "brave1.gov.ua",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eae118a316c2bb9",
+      "name": "Mits Capital",
+      "group": "company",
+      "val": 20,
+      "industry": "",
+      "website": "mits.capital",
+      "description": "Imported Account"
+    },
+    {
+      "id": "68eb083ae80ff0e33",
+      "name": "koto art",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "https://koto.art/?v=3943d8795e03"
+    },
+    {
+      "id": "68eb07de895f4dd6a",
+      "name": "Ukr STD",
+      "group": "person",
+      "val": 10,
+      "email": "ukrstd@hotmail.com",
+      "role": "Contact",
+      "description": "https://ukrstd.cz/"
+    },
+    {
+      "id": "68eb074aaba44e787",
+      "name": "BCB international",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "https://bcbin.com/"
+    },
+    {
+      "id": "68eb06bbbe06e34fc",
+      "name": "Smart mast",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "DTV 2025, company in the name"
+    },
+    {
+      "id": "68eb06644539f1792",
+      "name": "jumpaero n/a",
+      "group": "person",
+      "val": 10,
+      "email": "info@jumpaero.com",
+      "role": "Contact",
+      "description": "https://jumpaero.com/"
+    },
+    {
+      "id": "68eb05f6497400ab1",
+      "name": "Dignitas N/a",
+      "group": "person",
+      "val": 10,
+      "email": "info@dignitas.fund",
+      "role": "Contact",
+      "description": "https://dignitas.fund/"
+    },
+    {
+      "id": "68eb05ad69a08702a",
+      "name": "Pavliv Andriy",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Other Contacts of invest in lviv"
+    },
+    {
+      "id": "68eb045a37d4ae5e1",
+      "name": "Athlonavia n/a",
+      "group": "person",
+      "val": 10,
+      "email": "info@athlonavia.com",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eb03e837ddabee8",
+      "name": "Olena Povolotska",
+      "group": "person",
+      "val": 10,
+      "email": "rt0503328080@gmail.com",
+      "role": "Contact",
+      "description": "Dev manager UKR STD internationally active"
+    },
+    {
+      "id": "68eb037d0b7c83978",
+      "name": "Serhii Tertychnyi",
+      "group": "person",
+      "val": 10,
+      "email": "tert@ukr.net",
+      "role": "Contact",
+      "description": "CEO of UKR STD internationally active"
+    },
+    {
+      "id": "68eb03177d304273a",
+      "name": "Olena Tarasenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "CEO of UKR STD internationally active"
+    },
+    {
+      "id": "68eb0162a92371e3b",
+      "name": "Vadym Dynin",
+      "group": "person",
+      "val": 10,
+      "email": "vdynin@formag.com",
+      "role": "Contact",
+      "description": "https://formag.com/"
+    },
+    {
+      "id": "68eb011065f30230b",
+      "name": "Brave1 Market",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Marketplace",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eb0110638cf0fd0",
+      "name": "Diia Portal",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Ukraine's digital services portal"
+    },
+    {
+      "id": "68eb01106129c74c5",
+      "name": "Lviv Polytechnic",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "University Contact",
+      "description": "Major Ukrainian technical university"
+    },
+    {
+      "id": "68eb01105eb122b0c",
+      "name": "NAzar l",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "General Contact",
+      "description": "Ukrainian startup school"
+    },
+    {
+      "id": "68eb01105c4a3b490",
+      "name": "KSE Graduate School",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Kyiv School of Economics"
+    },
+    {
+      "id": "68eb011059e658190",
+      "name": "Oleskandr Kucherenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Founder & CEO",
+      "description": "CEO of Reface AI"
+    },
+    {
+      "id": "68eb011057627c3ec",
+      "name": "Reface AI",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Company Contact",
+      "description": "Ukrainian AI company"
+    },
+    {
+      "id": "68eb011054fbc5aa0",
+      "name": "Iryna Melnyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Project Manager at NODIH"
+    },
+    {
+      "id": "68eb0110529c4c29b",
+      "name": "Mariana Voloshyn",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Project Manager at NODIH"
+    },
+    {
+      "id": "68eb011050413720c",
+      "name": "Oleh Duma",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Investment Director at NODIH"
+    },
+    {
+      "id": "68eb01104dd3f287c",
+      "name": "Jakob von Cappeln",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Vice President at NODIH"
+    },
+    {
+      "id": "68eb011042cb39430",
+      "name": "Innovation Development Fund",
+      "group": "person",
+      "val": 10,
+      "email": "support@usf.com.ua",
+      "role": "Contact",
+      "description": "Includes Brave1 and USF"
+    },
+    {
+      "id": "68eb01103fdbb8ff0",
+      "name": "Test in Ukraine",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Program Contact",
+      "description": "Testing program for foreign companies"
+    },
+    {
+      "id": "68eb011036b81c14d",
+      "name": "Pavlo Kartashov",
+      "group": "person",
+      "val": 10,
+      "email": "support@usf.com.ua",
+      "role": "Manager",
+      "description": "Contact via USF"
+    },
+    {
+      "id": "68eb011033defcb2e",
+      "name": "Viktor Rudenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Team Member",
+      "description": "New team member at Brave1"
+    },
+    {
+      "id": "68eb0110316769751",
+      "name": "Nataliia Kushnerska",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Project Lead",
+      "description": "Brave1 Project Lead"
+    },
+    {
+      "id": "68eb01102ef1e30ff",
+      "name": "Oleksandr Bornyakov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Deputy Minister",
+      "description": "Deputy Minister of Digital Transformation"
+    },
+    {
+      "id": "68eb01102792fb540",
+      "name": "Ivan Golishnikov",
+      "group": "person",
+      "val": 10,
+      "email": "support@usf.com.ua",
+      "role": "Department Head",
+      "description": "Contact via USF main line"
+    },
+    {
+      "id": "68eb011024b13504f",
+      "name": "Mykhailo Fedorov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "First Deputy Prime Minister",
+      "description": "Minister of Digital Transformation"
+    },
+    {
+      "id": "68eb011014a8c2a61",
+      "name": "Ukrainian Startup Fund",
+      "group": "person",
+      "val": 10,
+      "email": "support@usf.com.ua",
+      "role": "General Contact",
+      "description": "Main contact for USF"
+    },
+    {
+      "id": "68eaffcd2120fa377",
+      "name": "Dima Demi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CSO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd1eb17492a",
+      "name": "Oleksandr Zhitenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CMO/CCO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd1c4df0eb7",
+      "name": "Anton Wild",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "GenAI @ Bosch || Freelance Designer & Photographer"
+    },
+    {
+      "id": "68eaffcd19fa801f5",
+      "name": "Oleg Ecomm",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd17a1310af",
+      "name": "Signals Noble",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd154272fd8",
+      "name": "Tetiana Dymytrashchyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "International Development",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd12e0c674f",
+      "name": "Oleksii Lanets",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd1084f83b6",
+      "name": "Alexander Loew",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd0e1809a82",
+      "name": "Esa Niemi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd0baa45eb5",
+      "name": "Yaroslav Makodzeba",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "iDefense Tech Associate",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd0939f8e37",
+      "name": "Anton Ulanovych",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Partner",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd06c4b164b",
+      "name": "Simon Woodiwiss",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd045116d33",
+      "name": "Pavlo Morozvskyi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Business Development Manager",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcd01dc29f50",
+      "name": "Paddy Kerrigan",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Mission Operations",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccf38e0cd5f",
+      "name": "Balthasar von Hohenthal",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chief Operating Officer",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccf11c389a7",
+      "name": "Oleh Krisenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Project Manager",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcceea945700",
+      "name": "Volodymyr Verbonol",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "President",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccec38f6b9a",
+      "name": "Sion Rowlands",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcce9c13c7cf",
+      "name": "Nazar Podolchak",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcce7594f85c",
+      "name": "Fedir Martynov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcce4f7ad7bc",
+      "name": "Andrii Anatoliiovych",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcce288deba1",
+      "name": "Lars Langhans",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head of project management",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcce01ef0975",
+      "name": "Michael Druckman",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccddccf1f9f",
+      "name": "Yuri Kushnir",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccdb710fa90",
+      "name": "Mariia Alipatova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccd91117c20",
+      "name": "Andrii Hrytseniuk",
+      "group": "person",
+      "val": 10,
+      "email": "a******@brave1.gov.ua",
+      "role": "Head of Brave1",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccd6a227d56",
+      "name": "Yury Levenets",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccd42805c0c",
+      "name": "Yuriy Pivovarov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccd1b717c54",
+      "name": "Yuriy Kubrushko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcccf4ea6ce0",
+      "name": "Yurii Tovbin",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccccdee3e73",
+      "name": "Yurii Mykytyuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccca6fac28e",
+      "name": "Yurii Hryhorenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccc805a206a",
+      "name": "Yuriy Boyko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccc58e61641",
+      "name": "Yuri Rashkevych",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccc31147050",
+      "name": "Yuri Gordienko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccc099dc041",
+      "name": "Yura Savchuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccbe25a4752",
+      "name": "Yuliia Shvech",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccbbae5442c",
+      "name": "Yevgen Utkin",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccb92ff92d3",
+      "name": "Wojciech Wolski",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccb6b2e0980",
+      "name": "William Grant",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccb437fbcaf",
+      "name": "William Gamson",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccb1a53710f",
+      "name": "Vyacheslav Klepko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccaf3d3bb45",
+      "name": "Volodymyr Tymofiiv",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccace3051ad",
+      "name": "Volodymyr Nosov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffccaa7ad0228",
+      "name": "Volodymyr Kucherenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcca7ff81a39",
+      "name": "Volodymyr Duba",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcca57cab5ee",
+      "name": "Vladimir Khrypun",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcca3014a5d2",
+      "name": "Vitaliy Klimov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcca0826a2e6",
+      "name": "Vitalik Buterin",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc9dfb403a8",
+      "name": "Vitalii Semenovykh",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc9b7c29d16",
+      "name": "Veronika Seleznova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc990f50753",
+      "name": "Valerii Iakovenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc96a3b1d5e",
+      "name": "Valerii Borovyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc93ed78b1e",
+      "name": "Valentyna Vergelis",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc91442207d",
+      "name": "Valentyna Lykhodii",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc8ebda3290",
+      "name": "Valentin Mirovitsky",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc8c3a4922d",
+      "name": "Vadim Novik",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc89a8042d7",
+      "name": "Tom Oulton",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc872fb9ef7",
+      "name": "Tom Grant",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc84bafc112",
+      "name": "Taras Huziak",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc824d32fd5",
+      "name": "Steve Dunlop",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc7fd860a73",
+      "name": "Steve Baskin",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc7d59bfc73",
+      "name": "Stephen Biddle",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc7ad012766",
+      "name": "Stepan Veselovsky",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc77ed02f66",
+      "name": "Stanislav Prybytko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc75804d17c",
+      "name": "Seth Jones",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc73165db85",
+      "name": "Serhiy Rylkov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc70745051e",
+      "name": "Serhiy Prytula",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc6e0c43946",
+      "name": "Serhiy Mykolaienko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc6b9ba5895",
+      "name": "Serhiy Grydzhuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc690605947",
+      "name": "Serhii Tsivkach",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc61ddab50a",
+      "name": "Serhii Shmulanov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc5f7e74a97",
+      "name": "Serhii Maltsev",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc5d08e9420",
+      "name": "Serhii Kushch",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc5a9b789c0",
+      "name": "Sergio Barbato",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc582914202",
+      "name": "Rostyslav Hrom",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc55acbe87c",
+      "name": "Roman Voznenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc533b8d5e8",
+      "name": "Roman Romanov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc50ce918e7",
+      "name": "Roman Khmil",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc4e67e6e2b",
+      "name": "Rodion Belichenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc4bf808cec",
+      "name": "Robert Krawczyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc4997cd8e0",
+      "name": "Richard Knapps",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc476c01c90",
+      "name": "Richard Hornik",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc44fe877a7",
+      "name": "Phil Anderson",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc429800b17",
+      "name": "Peter Kaptein",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc4039b66fd",
+      "name": "Paweł Machcewicz",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc3dc9ee752",
+      "name": "Pavlo Verkhniatsky",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc3b4fab208",
+      "name": "Paul von Rague Schleyer",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc38dde2b29",
+      "name": "Panos Karabinios",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc3675fa05d",
+      "name": "Omar Abjurto",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc340634200",
+      "name": "Olexandr Leonov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc318746d9a",
+      "name": "Olena Lyevleva",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc2f1ae606e",
+      "name": "Oleksiy Martyanov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc2caa7f001",
+      "name": "Oleksandra Mokhliakova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc2a31d798e",
+      "name": "Oleksandr Volkov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc27db4d52f",
+      "name": "Oleksandr Romanchenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc256f062d5",
+      "name": "Oleksandr Rashevskii",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc230329635",
+      "name": "Oleksandr Prykhodko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc209d8d7b5",
+      "name": "Oleksandr Podolsky",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc1e3fb5d40",
+      "name": "Oleksandr Melnyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc1be16829e",
+      "name": "Oleksandr Kamyshin",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc1964959eb",
+      "name": "Oleksandr Diachenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc16f782fec",
+      "name": "Oleksandr Danylyuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc1482c3d2b",
+      "name": "Oleksander Ovtchinnikov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc121816986",
+      "name": "Oleksander Kapalka",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc0fa663e5a",
+      "name": "Oleh Tymoshenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc0d3b61315",
+      "name": "Oleh Horbachov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc0ac6945cd",
+      "name": "Nick Rens",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc085aa0de2",
+      "name": "Nick Dobson",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc05f023a62",
+      "name": "Mykola Kalashnikov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc0383a80ba",
+      "name": "Morgan Stanley",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcc0119ef720",
+      "name": "Mikolaj Czarnocki",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbf2d0ac9db",
+      "name": "Maxim Ivannikov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbf05611eb4",
+      "name": "Matt Bontrager",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbede842a35",
+      "name": "Marta Baziuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbeb87b68d3",
+      "name": "Mark Wootton",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbe9265484a",
+      "name": "Maksym Skrypachenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbe6b6d9254",
+      "name": "Kyrylo Besarab",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbe448ea3dc",
+      "name": "Krzysztof Kurzydłowski",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbe1e0b8789",
+      "name": "Kostiantyn Koretskyi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbdf799c103",
+      "name": "Konstantin Lissounov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbdd0e762f5",
+      "name": "Kay Schwabedal",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbdaa8ce2f0",
+      "name": "Katelynne Hoffman",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbd84b1383b",
+      "name": "Jim Metzger",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbd5d9fe910",
+      "name": "Jens Nielsen",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbd36f82688",
+      "name": "Jardar Gjerde",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbd0fc635dd",
+      "name": "Ivan Borisenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbce8c0cac5",
+      "name": "Iryna Ovcharenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbcc00d4a58",
+      "name": "Illiya Stepanov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbc99223edd",
+      "name": "Ihor Kravets",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbc72daafca",
+      "name": "Ihor Kopytok",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbc4cb8c701",
+      "name": "Griffin Macaulay",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbc2513e94a",
+      "name": "Edoardo Camponeschi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbbfe993812",
+      "name": "Derek Eberhart",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbbda746af5",
+      "name": "Denys Yanishevskiy",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbbb39475fb",
+      "name": "David Horovits",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbb8d56b064",
+      "name": "Daniel Lehan",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbb65d851ba",
+      "name": "Christian Fjader",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbb424b82e4",
+      "name": "Charles Freeman",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbb1b26bf3f",
+      "name": "Bohdan Udovychenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbaf420b21d",
+      "name": "Barry Wieselberg",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbacd7a1fda",
+      "name": "Athanasios Kalleris",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcbaa76e1ad1",
+      "name": "Artur Boretskii",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcba805fdf8f",
+      "name": "Anton Dehtiarov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcba592b6b89",
+      "name": "Annie Gavrilovic-Cross",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcba32a832cc",
+      "name": "Andriy Tsyganok",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcba0a06aee2",
+      "name": "Andriy Osmolovych",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb9e276d06b",
+      "name": "Andrian Prokip",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb9ba995f68",
+      "name": "Alexander Tikhonenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb993b79fc3",
+      "name": "Viktor Kovalenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb96cba2b9d",
+      "name": "Valentyna Melnyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb9458b39c8",
+      "name": "Tomasz Sielicki",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb91e5fc367",
+      "name": "Stan Vorobev",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb8f77e7765",
+      "name": "Siarhei Silich",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb8cff7776e",
+      "name": "Ron Shelayev",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb8a85d73f9",
+      "name": "Roman Zelensky",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb87ef1e606",
+      "name": "Pavlo Kartashov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb857be7fa8",
+      "name": "Mykola Kravchenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb8301a1a5f",
+      "name": "Myroslava Omelchenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb809fde496",
+      "name": "Maria Oleynikova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb7e342e25e",
+      "name": "Maciej Jakub-Jacyna",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb7bcfb731e",
+      "name": "James Andersen",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb7951c72d1",
+      "name": "Fares Badawi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb761233b64",
+      "name": "Dmytro Khabariv",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb734669f35",
+      "name": "Dmytri Ananiev",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb70af30cbe",
+      "name": "Dimitri Chonigman",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb6e5b9e248",
+      "name": "Denis Senyuta",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Owner and founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb6be61bf1e",
+      "name": "Denys Kuharievskyi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb6955bc5ef",
+      "name": "Andrew Reilly",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb66a315edc",
+      "name": "Andrii Khomiach",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Fundraising Manager",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb64111d4f2",
+      "name": "Anatoly Kozisky",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Major CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb61909157b",
+      "name": "Alex Shybanov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO Co-founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb5ef95126e",
+      "name": "Aleksandar Bulatovic",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head and Strategic Development Adviser in charge of innovation and science and technology ecosystem",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb5c4e9fd1c",
+      "name": "Yuriy Mysiakin",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb598f15e11",
+      "name": "Yuri Samarev",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head of International Partnership and Cooperation",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb570980450",
+      "name": "Yevgen Gnenny",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Co-founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb54967f2cf",
+      "name": "Volodymyr Bryndak",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chief Expert at State Reserve Agency of Ukraine",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb5217169d7",
+      "name": "Vincent Powell",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Partner co-owner",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb4fa52d2fa",
+      "name": "Viktor Kevliuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb4d32af3c5",
+      "name": "Travis Callan",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb4ac1a416e",
+      "name": "Tetyana Tsybulska",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb485157625",
+      "name": "Simon Wright",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb45dc750ea",
+      "name": "Ron Franke",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb4364dad1a",
+      "name": "Olga Belousova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chief Marketing Officer and Board Member of Supervisory Board",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb40f5b8c94",
+      "name": "Oleskandr Kucherenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Founder & CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb3e84d5027",
+      "name": "Olena Sosiedka",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Co-founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb3c13bea05",
+      "name": "Oleksiy Yakovenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "General Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb399db4f6d",
+      "name": "Oleksandra Yermilova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Executive Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb3730b45c7",
+      "name": "Nikulaj Krapp",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "COO Partner",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb34bc64131",
+      "name": "Nikolaj Hansen",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Legal Advisor",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb3239021cd",
+      "name": "Natalia Sybireva",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head of Data OSINT and GIS team",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb2fc7bb82a",
+      "name": "Mykhajlo Shevchenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CFO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb2d5715a75",
+      "name": "Mick Ryan",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Partner co-Owner",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb2aec61f2e",
+      "name": "Larysa Krasnitska",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb287a5ade2",
+      "name": "Jessica Crum-Russo",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Senior Director: Congressional Affairs & Defense Policy",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb25ecaaf45",
+      "name": "Jason Perry",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Regional Manager",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb2370e0deb",
+      "name": "James Garner",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb20f8bfd6e",
+      "name": "Ivan Lytvyn",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head of Manufacturing",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb1e7c00a93",
+      "name": "Ihor Fedorov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Rector Igor Sikorsky KPI / Co-founder NODUS",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb1c03ca2db",
+      "name": "Igor Lutsenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head of the NATO and EU Integration Office",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb19964fd36",
+      "name": "Ievgeniia Pekarchuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb1731ef38d",
+      "name": "Ian Kelly",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb14b9f35d6",
+      "name": "Hennadii Pernarivskyi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Deputy Minister",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb123b61049",
+      "name": "Guliya Semerikova",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Head of Defence Procurement Agency",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb0fcd71245",
+      "name": "Grigory Omelchuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb0d888c0e6",
+      "name": "Greg Volkov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO Co-founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb0b09a64b3",
+      "name": "Greg Volk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb0896d8af9",
+      "name": "Eugene Kolesnyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb060a89cc0",
+      "name": "Eduard Zharkov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chairman of the Supervisory Board",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb0391221a6",
+      "name": "Donald Tang",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Founder & CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcb0109e7fc7",
+      "name": "David Weisberg",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcaf2b2ed6ff",
+      "name": "Channa Breytenbach",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcaf03a30fb5",
+      "name": "Arsen Zhumadilov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcaedcadbd08",
+      "name": "Anton Melnyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcaeb600e7e1",
+      "name": "Andriy Kiryk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Senior Associate",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcae8ec89e2a",
+      "name": "Andrea Patino-Contreras",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chief International Relations & Business Development Officer",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcae671b54a5",
+      "name": "Alex Kuzik",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Co-founder CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcae3f7d03b2",
+      "name": "Yulia Melnyk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Deputy CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcae18c5c079",
+      "name": "Sergii Tsymbaliuk",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcadf2387656",
+      "name": "Oksana Chyhir",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Deputy Head of the Department of Innovations and Transfer Technology",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcadcaa04aba",
+      "name": "Mykola Markushovskyi",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Deputy Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcada364855e",
+      "name": "Keith MacPherson",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO Founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcad7c03fdd5",
+      "name": "Katrina Tuliao",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chief Consultant and Co-founder",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcad54bc3440",
+      "name": "Joshua Giles",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcad2c83d6ab",
+      "name": "Ivan Golishnikov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "International cooperation and promotion department",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcad04f88aec",
+      "name": "Ihor Chernov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO - Robotics Company",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcacdd7181d1",
+      "name": "Eddy Wiebe",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "COO",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcacb3deb052",
+      "name": "Yuliya Yurchenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Chief Operating Officer",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcac886cadc9",
+      "name": "Yevgeny Zhirik",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Director of the Department of Strategic planning and international cooperation",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcac611b9811",
+      "name": "Vlad Sydorenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Senior Partner",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcac39a3550c",
+      "name": "Svitlana Kutseva",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Director of International Relations Department",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcac1232797d",
+      "name": "Olga Shapoval",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Executive Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcabea298bde",
+      "name": "Oleh Duma",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Investment Validation Director",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcabc29df9d8",
+      "name": "Adam Schultz",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaffcab98f24b45",
+      "name": "Artem Romaniukov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaff436e056bc28",
+      "name": "Defense Tech for UA",
+      "group": "person",
+      "val": 10,
+      "email": "info@defensetechforukraine.org",
+      "role": "Contact",
+      "description": "https://defensetechforukraine.org/"
+    },
+    {
+      "id": "68eafebeb8dd19201",
+      "name": "Vatag h-ugv",
+      "group": "person",
+      "val": 10,
+      "email": "info@groundrobotics.tech",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eafe58b08832340",
+      "name": "SC Ekran",
+      "group": "person",
+      "val": 10,
+      "email": "info@ekran.in.ua",
+      "role": "Contact",
+      "description": "www.ekran.store"
+    },
+    {
+      "id": "68eafda8d223d7743",
+      "name": "2uxv n/a",
+      "group": "person",
+      "val": 10,
+      "email": "contact@2uxv.com",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eafbc007dbadb24",
+      "name": "ivan oleksii",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "signal: thunder.446"
+    },
+    {
+      "id": "68eafb5202cf11d30",
+      "name": "anton chernysh",
+      "group": "person",
+      "val": 10,
+      "email": "anton.chernysh@beeta.tech",
+      "role": "Contact",
+      "description": "www.beeta.tech"
+    },
+    {
+      "id": "68eafae76b4bee66a",
+      "name": "Oleksandr halytskyi",
+      "group": "person",
+      "val": 10,
+      "email": "o.halytskyi@mil.ua",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eafa1461974fd87",
+      "name": "Laura Brady",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "https://www.earendelassociates.com/"
+    },
+    {
+      "id": "68eaf8ef76460519b",
+      "name": "Alexander Loew",
+      "group": "person",
+      "val": 10,
+      "email": "al@f5forty.com",
+      "role": "Contact",
+      "description": "www.f5forty.com"
+    },
+    {
+      "id": "68eaf70b8afb35a26",
+      "name": "Tomohiro Yoden",
+      "group": "person",
+      "val": 10,
+      "email": "Tomohiro_Yoden@jetro.go.jp",
+      "role": "Contact",
+      "description": "http://www.jetro.go.jp/poland/"
+    },
+    {
+      "id": "68eaf5be8dcf2e3d1",
+      "name": "Lysikov Alexander",
+      "group": "person",
+      "val": 10,
+      "email": "al@unit117.tech",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eaf46b5ad9ebc23",
+      "name": "Brad Sklencar",
+      "group": "person",
+      "val": 10,
+      "email": "bsklencar@thorntonfirm.com",
+      "role": "Contact",
+      "description": "Lawyer"
+    },
+    {
+      "id": "68eaec1b93850adcf",
+      "name": "Igor Nakonechnyi",
+      "group": "person",
+      "val": 10,
+      "email": "igor.nakonechnyy@linkupst.com",
+      "role": "Contact",
+      "description": "https://linkupst.com/"
+    },
+    {
+      "id": "68eaeb0c5a584a2e8",
+      "name": "Elizabeth Teterina",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "company is reach 95"
+    },
+    {
+      "id": "68eaea7029f9bf9b9",
+      "name": "James Caruso",
+      "group": "person",
+      "val": 10,
+      "email": "jamesc@stampseed.com",
+      "role": "Contact",
+      "description": "https://www.stampseed.com/"
+    },
+    {
+      "id": "68eae9811bf509389",
+      "name": "Henry Hsieh",
+      "group": "person",
+      "val": 10,
+      "email": "kyiv@taitra.org.tw",
+      "role": "Contact",
+      "description": "WhatsApp"
+    },
+    {
+      "id": "68eae979cbbe9da6d",
+      "name": "David Rosser",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Mobile Num: 07788 310 470"
+    },
+    {
+      "id": "68eae7e48870a76ff",
+      "name": "Thomas Withington",
+      "group": "person",
+      "val": 10,
+      "email": "t_withington@hotmail.com",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eae68b9b162fd17",
+      "name": "N/a N/a",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "https://pruzhina.biz.ua/"
+    },
+    {
+      "id": "https://pr.org.ua,,+380982015520,,,,,,,,,2025-10-11 23:21:47,2025-10-11 23:21:47,,,,,,,,2025-10-11 23:21:47,68eae67695a861cce,Виготовлення та продаж пружин,{68eae67695a861cce:{role:null",
+      "name": "isInactive:false}},,,,68df1d5a1ee3effd6,Preston Zen,,,,,,,,,,,,",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eae3d397d9891f9",
+      "name": "Eugene Maksymenko",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "https://ua.linkedin.com/in/eugene-maksymenko-0b957813"
+    },
+    {
+      "id": "68eae359bb15e0325",
+      "name": "solomiia chernykhivska",
+      "group": "person",
+      "val": 10,
+      "email": "solomiia.chernykhivska@rarog.ua",
+      "role": "Contact",
+      "description": "www.udi.investments"
+    },
+    {
+      "id": "68eae2c68693b8a9a",
+      "name": "Artem Romaniukov",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eae2a924ed432f8",
+      "name": "Tyler Fordham",
+      "group": "person",
+      "val": 10,
+      "email": "tyler.fordham@darkwolfsolutions.com",
+      "role": "Contact",
+      "description": "www.darkwolfsolutions.com"
+    },
+    {
+      "id": "68eae274b8de8f256",
+      "name": "Jakob Dalhoff",
+      "group": "person",
+      "val": 10,
+      "email": "",
+      "role": "CEO - MSc Finance & Accounting",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "68eae20fa6a0907f7",
+      "name": "Andrii Chornyi",
+      "group": "person",
+      "val": 10,
+      "email": "contact@ironflight.ai",
+      "role": "Contact",
+      "description": "https://www.ironflight.ai/"
+    },
+    {
+      "id": "22",
+      "name": "Сергій Тертичний",
+      "group": "person",
+      "val": 10,
+      "email": "tert@ukr.net",
+      "role": "Contact",
+      "description": "https://ukrstd.cz/"
+    },
+    {
+      "id": "7",
+      "name": "Natalia Sybiga",
+      "group": "person",
+      "val": 10,
+      "email": "nataliasybiga@mits.capital",
+      "role": "Contact",
+      "description": "https://mits.capital"
+    },
+    {
+      "id": "5",
+      "name": "Emiliano Carlesi",
+      "group": "person",
+      "val": 10,
+      "email": "emiliano.carlesi@kakama.eu",
+      "role": "Contact",
+      "description": "https://kakama.eu"
+    },
+    {
+      "id": "3",
+      "name": "Mads Munk",
+      "group": "person",
+      "val": 10,
+      "email": "mm@mydefence.dk",
+      "role": "Senior Software Engineer",
+      "description": "https://mydefence.com/"
+    },
+    {
+      "id": "16",
+      "name": "Андрій Чомин",
+      "group": "person",
+      "val": 10,
+      "email": "ironflight.ai@gmail.com",
+      "role": "Contact",
+      "description": "IRONFLIGHT.AI"
+    },
+    {
+      "id": "14",
+      "name": "Fanta Mykhailo",
+      "group": "person",
+      "val": 10,
+      "email": "M.Fanta@phantom-tech.com.ua",
+      "role": "Contact",
+      "description": "www.phantom-tech.com.ua"
+    },
+    {
+      "id": "11",
+      "name": "Цілі Еспозіто",
+      "group": "person",
+      "val": 10,
+      "email": "info@ealcom.ua",
+      "role": "Contact",
+      "description": "Imported Contact"
+    },
+    {
+      "id": "1",
+      "name": "Ievgen Terentiev",
+      "group": "person",
+      "val": 10,
+      "email": "ievgen.terentiev@logics7.com",
+      "role": "Sales Rep",
+      "description": "https://www.l7simulators.com/"
+    }
+  ],
+  "links": [
+    {
+      "source": "68eb011065f30230b",
+      "target": "68eae1b3a2ee994d5"
+    },
+    {
+      "source": "68eb01106129c74c5",
+      "target": "68eafc16f2def16d1"
+    },
+    {
+      "source": "68eb01105eb122b0c",
+      "target": "68eafc1800c765cc4"
+    },
+    {
+      "source": "68eb011059e658190",
+      "target": "68eafc17980fede05"
+    },
+    {
+      "source": "68eb011057627c3ec",
+      "target": "68eafc17980fede05"
+    },
+    {
+      "source": "68eb01103fdbb8ff0",
+      "target": "68eae1b3a2ee994d5"
+    },
+    {
+      "source": "68eb011036b81c14d",
+      "target": "68eafc183ff7569e1"
+    },
+    {
+      "source": "68eb011033defcb2e",
+      "target": "68eae1b3a2ee994d5"
+    },
+    {
+      "source": "68eb0110316769751",
+      "target": "68eae1b3a2ee994d5"
+    },
+    {
+      "source": "68eb01102ef1e30ff",
+      "target": "68eafc17226e1f85c"
+    },
+    {
+      "source": "68eb01102792fb540",
+      "target": "68eafc183ff7569e1"
+    },
+    {
+      "source": "68eb011024b13504f",
+      "target": "68eafc17226e1f85c"
+    },
+    {
+      "source": "68eb011014a8c2a61",
+      "target": "68eafc183ff7569e1"
+    },
+    {
+      "source": "68eaffcd2120fa377",
+      "target": "68eafc1887ffa8203"
+    },
+    {
+      "source": "68eaffcd1eb17492a",
+      "target": "68eafc17f2d2ecdc5"
+    },
+    {
+      "source": "68eaffcd154272fd8",
+      "target": "68eafc178d6b2956d"
+    },
+    {
+      "source": "68eaffcd0e1809a82",
+      "target": "68eafc17541f779a1"
+    },
+    {
+      "source": "68eaffcd0baa45eb5",
+      "target": "68eafc17d19c232ae"
+    },
+    {
+      "source": "68eaffcd0939f8e37",
+      "target": "68eafc15d0cad3b20"
+    },
+    {
+      "source": "68eaffcd06c4b164b",
+      "target": "68eafc175f57def11"
+    },
+    {
+      "source": "68eaffcd045116d33",
+      "target": "68eafc16d5fa05f27"
+    },
+    {
+      "source": "68eaffcd01dc29f50",
+      "target": "68eafc15d2e773faf"
+    },
+    {
+      "source": "68eaffccf38e0cd5f",
+      "target": "68eafc178912a7c46"
+    },
+    {
+      "source": "68eaffccf11c389a7",
+      "target": "68eafc17b4a661232"
+    },
+    {
+      "source": "68eaffcceea945700",
+      "target": "68eafc162310da729"
+    },
+    {
+      "source": "68eaffccec38f6b9a",
+      "target": "68eafc17e18ed96df"
+    },
+    {
+      "source": "68eaffcce9c13c7cf",
+      "target": "68eafc1800c765cc4"
+    },
+    {
+      "source": "68eaffcce4f7ad7bc",
+      "target": "68eafc16aa26a17f6"
+    },
+    {
+      "source": "68eaffcce288deba1",
+      "target": "68eafc1671a441364"
+    },
+    {
+      "source": "68eaffccd91117c20",
+      "target": "68eae1b3a2ee994d5"
+    },
+    {
+      "source": "68eaffccd6a227d56",
+      "target": "68eafc17466114b67"
+    },
+    {
+      "source": "68eaffccd42805c0c",
+      "target": "68eafc1620c422e4c"
+    },
+    {
+      "source": "68eaffccd1b717c54",
+      "target": "68eafc17a3077781e"
+    },
+    {
+      "source": "68eaffcccf4ea6ce0",
+      "target": "68eafc16ee7336c09"
+    },
+    {
+      "source": "68eaffccccdee3e73",
+      "target": "68eafc173d520c7b8"
+    },
+    {
+      "source": "68eaffccca6fac28e",
+      "target": "68eafc18378f3ddca"
+    },
+    {
+      "source": "68eaffccc805a206a",
+      "target": "68eafc16ec3f98a1b"
+    },
+    {
+      "source": "68eaffccc58e61641",
+      "target": "68eafc16f2def16d1"
+    },
+    {
+      "source": "68eaffccc31147050",
+      "target": "68eafc1883c1d5408"
+    },
+    {
+      "source": "68eaffccc099dc041",
+      "target": "68eafc1784c23998a"
+    },
+    {
+      "source": "68eaffccbe25a4752",
+      "target": "68eafc17dcf0e58aa"
+    },
+    {
+      "source": "68eaffccbbae5442c",
+      "target": "68eafc16566896ffd"
+    },
+    {
+      "source": "68eaffccb92ff92d3",
+      "target": "68eafc169dbafdb09"
+    },
+    {
+      "source": "68eaffccb6b2e0980",
+      "target": "68eafc17717eb81b1"
+    },
+    {
+      "source": "68eaffccb437fbcaf",
+      "target": "68eafc1835775475c"
+    },
+    {
+      "source": "68eaffccb1a53710f",
+      "target": "68eafc1861cacca3e"
+    },
+    {
+      "source": "68eaffcca7ff81a39",
+      "target": "68eafc1744275f690"
+    },
+    {
+      "source": "68eaffcca57cab5ee",
+      "target": "68eafc1793d2400c9"
+    },
+    {
+      "source": "68eaffcca3014a5d2",
+      "target": "68eafc18927a7279e"
+    },
+    {
+      "source": "68eaffcca0826a2e6",
+      "target": "68eafc16650db74a7"
+    },
+    {
+      "source": "68eaffcc9dfb403a8",
+      "target": "68eafc165cb0ba07d"
+    },
+    {
+      "source": "68eaffcc9b7c29d16",
+      "target": "68eafc1800c765cc4"
+    },
+    {
+      "source": "68eaffcc96a3b1d5e",
+      "target": "68eafc187d719bbe6"
+    },
+    {
+      "source": "68eaffcc93ed78b1e",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcc91442207d",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcc8ebda3290",
+      "target": "68eafc1861cacca3e"
+    },
+    {
+      "source": "68eaffcc8c3a4922d",
+      "target": "68eafc1677f3913b4"
+    },
+    {
+      "source": "68eaffcc89a8042d7",
+      "target": "68eafc17abd5dc7cb"
+    },
+    {
+      "source": "68eaffcc872fb9ef7",
+      "target": "68eafc17717eb81b1"
+    },
+    {
+      "source": "68eaffcc824d32fd5",
+      "target": "68eafc1786dfc7f05"
+    },
+    {
+      "source": "68eaffcc7d59bfc73",
+      "target": "68eafc161c7745e6e"
+    },
+    {
+      "source": "68eaffcc7ad012766",
+      "target": "68eafc16ee7336c09"
+    },
+    {
+      "source": "68eaffcc77ed02f66",
+      "target": "68eafc162cbd24e8f"
+    },
+    {
+      "source": "68eaffcc73165db85",
+      "target": "68eafc16def8546fe"
+    },
+    {
+      "source": "68eaffcc70745051e",
+      "target": "68eafc1791b24d0f6"
+    },
+    {
+      "source": "68eaffcc6e0c43946",
+      "target": "68eafc1835775475c"
+    },
+    {
+      "source": "68eaffcc6b9ba5895",
+      "target": "68eafc1885e57cc94"
+    },
+    {
+      "source": "68eaffcc690605947",
+      "target": "68eafc1858a76498a"
+    },
+    {
+      "source": "68eaffcc5f7e74a97",
+      "target": "68eafc16b063fce40"
+    },
+    {
+      "source": "68eaffcc5d08e9420",
+      "target": "68eafc1861cacca3e"
+    },
+    {
+      "source": "68eaffcc5a9b789c0",
+      "target": "68eafc176193b5d8d"
+    },
+    {
+      "source": "68eaffcc582914202",
+      "target": "68eafc1861cacca3e"
+    },
+    {
+      "source": "68eaffcc55acbe87c",
+      "target": "68eafc17226e1f85c"
+    },
+    {
+      "source": "68eaffcc533b8d5e8",
+      "target": "68eafc162a84a8e24"
+    },
+    {
+      "source": "68eaffcc50ce918e7",
+      "target": "68eafc1800c765cc4"
+    },
+    {
+      "source": "68eaffcc4e67e6e2b",
+      "target": "68eafc1703252d07a"
+    },
+    {
+      "source": "68eaffcc4bf808cec",
+      "target": "68eafc176193b5d8d"
+    },
+    {
+      "source": "68eaffcc44fe877a7",
+      "target": "68eafc1765fef1a05"
+    },
+    {
+      "source": "68eaffcc4039b66fd",
+      "target": "68eafc161a6270e28"
+    },
+    {
+      "source": "68eaffcc3dc9ee752",
+      "target": "68eafc1863fede74c"
+    },
+    {
+      "source": "68eaffcc3b4fab208",
+      "target": "68eafc17a54135f55"
+    },
+    {
+      "source": "68eaffcc38dde2b29",
+      "target": "68eafc16912769205"
+    },
+    {
+      "source": "68eaffcc3675fa05d",
+      "target": "68eafc18905fbcd06"
+    },
+    {
+      "source": "68eaffcc340634200",
+      "target": "68eafc1858a76498a"
+    },
+    {
+      "source": "68eaffcc318746d9a",
+      "target": "68eafc15ec1a5cfa4"
+    },
+    {
+      "source": "68eaffcc2f1ae606e",
+      "target": "68eafc16f0a776e22"
+    },
+    {
+      "source": "68eaffcc2caa7f001",
+      "target": "68eafc184472bf590"
+    },
+    {
+      "source": "68eaffcc27db4d52f",
+      "target": "68eafc1863fede74c"
+    },
+    {
+      "source": "68eaffcc256f062d5",
+      "target": "68eafc1846b2990a2"
+    },
+    {
+      "source": "68eaffcc230329635",
+      "target": "68eafc17daae36156"
+    },
+    {
+      "source": "68eaffcc1be16829e",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcc1964959eb",
+      "target": "68eafc183bb88ac11"
+    },
+    {
+      "source": "68eaffcc16f782fec",
+      "target": "68eafc16140327e8b"
+    },
+    {
+      "source": "68eaffcc1482c3d2b",
+      "target": "68eafc165eca5468b"
+    },
+    {
+      "source": "68eaffcc121816986",
+      "target": "68eafc17e5d2445bb"
+    },
+    {
+      "source": "68eaffcc0fa663e5a",
+      "target": "68eafc16c1d263b76"
+    },
+    {
+      "source": "68eaffcc0d3b61315",
+      "target": "68eafc16455edb394"
+    },
+    {
+      "source": "68eaffcc0ac6945cd",
+      "target": "68eafc17cd333f26f"
+    },
+    {
+      "source": "68eaffcc085aa0de2",
+      "target": "68eafc166f8d5d61e"
+    },
+    {
+      "source": "68eaffcc05f023a62",
+      "target": "68eafc183bb88ac11"
+    },
+    {
+      "source": "68eaffcc0383a80ba",
+      "target": "68eafc17808d44007"
+    },
+    {
+      "source": "68eaffcc0119ef720",
+      "target": "68eafc17d863f7f5d"
+    },
+    {
+      "source": "68eaffcbf2d0ac9db",
+      "target": "68eafc16bcd410127"
+    },
+    {
+      "source": "68eaffcbf05611eb4",
+      "target": "68eafc164df7ebefb"
+    },
+    {
+      "source": "68eaffcbede842a35",
+      "target": "68eafc1885e57cc94"
+    },
+    {
+      "source": "68eaffcbe9265484a",
+      "target": "68eafc16359b0d774"
+    },
+    {
+      "source": "68eaffcbe6b6d9254",
+      "target": "68eafc172ffac7700"
+    },
+    {
+      "source": "68eaffcbe448ea3dc",
+      "target": "68eafc189495cefbf"
+    },
+    {
+      "source": "68eaffcbe1e0b8789",
+      "target": "68eafc16140327e8b"
+    },
+    {
+      "source": "68eaffcbdf799c103",
+      "target": "68eafc1769179ec4b"
+    },
+    {
+      "source": "68eaffcbdd0e762f5",
+      "target": "68eafc167a0b35bfc"
+    },
+    {
+      "source": "68eaffcbd84b1383b",
+      "target": "68eafc182ae9473d3"
+    },
+    {
+      "source": "68eaffcbd5d9fe910",
+      "target": "68eafc180738587f9"
+    },
+    {
+      "source": "68eaffcbd36f82688",
+      "target": "68eafc168f0c9fac9"
+    },
+    {
+      "source": "68eaffcbd0fc635dd",
+      "target": "68eae1b3a2ee994d5"
+    },
+    {
+      "source": "68eaffcbce8c0cac5",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcbcc00d4a58",
+      "target": "68eafc172dc65f6ce"
+    },
+    {
+      "source": "68eaffcbc99223edd",
+      "target": "68eafc1848e9373c1"
+    },
+    {
+      "source": "68eaffcbc4cb8c701",
+      "target": "68eafc1765fef1a05"
+    },
+    {
+      "source": "68eaffcbc2513e94a",
+      "target": "68eafc17cd333f26f"
+    },
+    {
+      "source": "68eaffcbbda746af5",
+      "target": "68eafc183dd2692ea"
+    },
+    {
+      "source": "68eaffcbb8d56b064",
+      "target": "68eafc16e7dbee95c"
+    },
+    {
+      "source": "68eaffcbb424b82e4",
+      "target": "68eafc18684c90d76"
+    },
+    {
+      "source": "68eaffcbb1b26bf3f",
+      "target": "68eafc16dcc269f74"
+    },
+    {
+      "source": "68eaffcbaf420b21d",
+      "target": "68eafc17078862600"
+    },
+    {
+      "source": "68eaffcbaa76e1ad1",
+      "target": "68eafc162cbd24e8f"
+    },
+    {
+      "source": "68eaffcba805fdf8f",
+      "target": "68eafc18750300b1b"
+    },
+    {
+      "source": "68eaffcba592b6b89",
+      "target": "68eafc16bee886e9f"
+    },
+    {
+      "source": "68eaffcba32a832cc",
+      "target": "68eafc18314608953"
+    },
+    {
+      "source": "68eaffcba0a06aee2",
+      "target": "68eafc17b6d4a2385"
+    },
+    {
+      "source": "68eaffcb9e276d06b",
+      "target": "68eafc16cace85b4f"
+    },
+    {
+      "source": "68eaffcb9ba995f68",
+      "target": "68eafc18545f1ad99"
+    },
+    {
+      "source": "68eaffcb993b79fc3",
+      "target": "68eafc1846b2990a2"
+    },
+    {
+      "source": "68eaffcb96cba2b9d",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcb9458b39c8",
+      "target": "68eafc1782a8706e3"
+    },
+    {
+      "source": "68eaffcb91e5fc367",
+      "target": "68eafc16d831cf2c9"
+    },
+    {
+      "source": "68eaffcb8f77e7765",
+      "target": "68eafc16359b0d774"
+    },
+    {
+      "source": "68eaffcb8cff7776e",
+      "target": "68eafc172b90a68ad"
+    },
+    {
+      "source": "68eaffcb8a85d73f9",
+      "target": "68eafc173f9a41e63"
+    },
+    {
+      "source": "68eaffcb87ef1e606",
+      "target": "68eafc184225d7413"
+    },
+    {
+      "source": "68eaffcb857be7fa8",
+      "target": "68eafc16140327e8b"
+    },
+    {
+      "source": "68eaffcb809fde496",
+      "target": "68eafc185abfbc119"
+    },
+    {
+      "source": "68eaffcb7bcfb731e",
+      "target": "68eafc17b0462985c"
+    },
+    {
+      "source": "68eaffcb7951c72d1",
+      "target": "68eafc175657595ac"
+    },
+    {
+      "source": "68eaffcb761233b64",
+      "target": "68eafc162ef28ac4a"
+    },
+    {
+      "source": "68eaffcb734669f35",
+      "target": "68eafc15ec1a5cfa4"
+    },
+    {
+      "source": "68eaffcb6e5b9e248",
+      "target": "68eafc1833604b148"
+    },
+    {
+      "source": "68eaffcb6be61bf1e",
+      "target": "68eafc17cf67cf90e"
+    },
+    {
+      "source": "68eaffcb6955bc5ef",
+      "target": "68eafc15db49c5f82"
+    },
+    {
+      "source": "68eaffcb66a315edc",
+      "target": "68eafc1700f17200f"
+    },
+    {
+      "source": "68eaffcb64111d4f2",
+      "target": "68eafc169770487d8"
+    },
+    {
+      "source": "68eaffcb61909157b",
+      "target": "68eafc169ba4864fc"
+    },
+    {
+      "source": "68eaffcb5ef95126e",
+      "target": "68eafc171723cb236"
+    },
+    {
+      "source": "68eaffcb5c4e9fd1c",
+      "target": "68eae234f295c770a"
+    },
+    {
+      "source": "68eaffcb598f15e11",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcb570980450",
+      "target": "68eafc185abfbc119"
+    },
+    {
+      "source": "68eaffcb54967f2cf",
+      "target": "68eafc17e3c0bd60c"
+    },
+    {
+      "source": "68eaffcb5217169d7",
+      "target": "68eafc1712ae6e9f1"
+    },
+    {
+      "source": "68eaffcb4fa52d2fa",
+      "target": "68eafc1649bf54016"
+    },
+    {
+      "source": "68eaffcb4d32af3c5",
+      "target": "68eafc15df86f2b7c"
+    },
+    {
+      "source": "68eaffcb4ac1a416e",
+      "target": "68eafc171bac90320"
+    },
+    {
+      "source": "68eaffcb485157625",
+      "target": "68eafc1777e0068a8"
+    },
+    {
+      "source": "68eaffcb45dc750ea",
+      "target": "68eafc167c1f764d6"
+    },
+    {
+      "source": "68eaffcb4364dad1a",
+      "target": "68eafc174f4c04188"
+    },
+    {
+      "source": "68eaffcb40f5b8c94",
+      "target": "68eafc17980fede05"
+    },
+    {
+      "source": "68eaffcb3e84d5027",
+      "target": "68eafc185abfbc119"
+    },
+    {
+      "source": "68eaffcb3c13bea05",
+      "target": "68eafc1839a1cde20"
+    },
+    {
+      "source": "68eaffcb399db4f6d",
+      "target": "68eafc1839a1cde20"
+    },
+    {
+      "source": "68eaffcb3730b45c7",
+      "target": "68eafc15d503a7544"
+    },
+    {
+      "source": "68eaffcb34bc64131",
+      "target": "68eafc15d503a7544"
+    },
+    {
+      "source": "68eaffcb3239021cd",
+      "target": "68eafc16ac390d28c"
+    },
+    {
+      "source": "68eaffcb2fc7bb82a",
+      "target": "68eafc17e7e2f92c3"
+    },
+    {
+      "source": "68eaffcb2d5715a75",
+      "target": "68eafc1712ae6e9f1"
+    },
+    {
+      "source": "68eaffcb2aec61f2e",
+      "target": "68eafc174f4c04188"
+    },
+    {
+      "source": "68eaffcb287a5ade2",
+      "target": "68eafc17717eb81b1"
+    },
+    {
+      "source": "68eaffcb25ecaaf45",
+      "target": "68eafc1675dc7f9cf"
+    },
+    {
+      "source": "68eaffcb2370e0deb",
+      "target": "68eafc17a9a48076f"
+    },
+    {
+      "source": "68eaffcb20f8bfd6e",
+      "target": "68eafc15bfb9482ea"
+    },
+    {
+      "source": "68eaffcb1e7c00a93",
+      "target": "68eafc1741eb0ee8b"
+    },
+    {
+      "source": "68eaffcb1c03ca2db",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcb1731ef38d",
+      "target": "68eafc17d621850a8"
+    },
+    {
+      "source": "68eaffcb14b9f35d6",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcb123b61049",
+      "target": "68eae2b99e0ee2474"
+    },
+    {
+      "source": "68eaffcb0d888c0e6",
+      "target": "68eafc1826a4d5bfb"
+    },
+    {
+      "source": "68eaffcb0b09a64b3",
+      "target": "68eafc16d189024f9"
+    },
+    {
+      "source": "68eaffcb060a89cc0",
+      "target": "68eafc184b09a5900"
+    },
+    {
+      "source": "68eaffcb0391221a6",
+      "target": "68eafc170555c5cb7"
+    },
+    {
+      "source": "68eaffcb0109e7fc7",
+      "target": "68eafc161e96b0f0c"
+    },
+    {
+      "source": "68eaffcaf2b2ed6ff",
+      "target": "68eafc15c418107f2"
+    },
+    {
+      "source": "68eaffcaf03a30fb5",
+      "target": "68eafc16e36cfccf0"
+    },
+    {
+      "source": "68eaffcaeb600e7e1",
+      "target": "68eafc15ec1a5cfa4"
+    },
+    {
+      "source": "68eaffcae8ec89e2a",
+      "target": "68eafc16912769205"
+    },
+    {
+      "source": "68eaffcae671b54a5",
+      "target": "68eafc15d71819b4a"
+    },
+    {
+      "source": "68eaffcae3f7d03b2",
+      "target": "68eafc1813cba39db"
+    },
+    {
+      "source": "68eaffcadf2387656",
+      "target": "68eafc1724a3fefd8"
+    },
+    {
+      "source": "68eaffcadcaa04aba",
+      "target": "68eafc171de4c0fd9"
+    },
+    {
+      "source": "68eaffcada364855e",
+      "target": "68eafc16a1dd05942"
+    },
+    {
+      "source": "68eaffcad7c03fdd5",
+      "target": "68eafc1826a4d5bfb"
+    },
+    {
+      "source": "68eaffcad54bc3440",
+      "target": "68eafc181e2d67495"
+    },
+    {
+      "source": "68eaffcad2c83d6ab",
+      "target": "68eafc183ff7569e1"
+    },
+    {
+      "source": "68eaffcad04f88aec",
+      "target": "68eae234f295c770a"
+    },
+    {
+      "source": "68eaffcacdd7181d1",
+      "target": "68eafc169553f5b52"
+    },
+    {
+      "source": "68eaffcacb3deb052",
+      "target": "68eafc1833604b148"
+    },
+    {
+      "source": "68eaffcac886cadc9",
+      "target": "68eafc17270197d97"
+    },
+    {
+      "source": "68eaffcac611b9811",
+      "target": "68eafc16933d57725"
+    },
+    {
+      "source": "68eaffcac39a3550c",
+      "target": "68eafc1839a1cde20"
+    },
+    {
+      "source": "68eaffcac1232797d",
+      "target": "68eafc16cd0bdcf87"
+    },
+    {
+      "source": "68eaffcabea298bde",
+      "target": "68eafc175d1fb3011"
+    },
+    {
+      "source": "68eaffcabc29df9d8",
+      "target": "68eafc15c85a3f57e"
+    },
+    {
+      "source": "68eae9811bf509389",
+      "target": "68eae94f3e54a1fb8"
+    },
+    {
+      "source": "68eae3d397d9891f9",
+      "target": "68eae36c10ba73095"
+    },
+    {
+      "source": "68eae2c68693b8a9a",
+      "target": "68eae2b99e0ee2474"
+    },
+    {
+      "source": "68eae274b8de8f256",
+      "target": "68eae234f295c770a"
+    },
+    {
+      "source": "7",
+      "target": "68eae118a316c2bb9"
+    },
+    {
+      "source": "3",
+      "target": "68eafc173b0b929e9"
+    },
+    {
+      "source": "1",
+      "target": "68eafc16ea0f50c27"
+    }
+  ]
+}

@@ -1,14 +1,49 @@
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+import { useData } from "../context/DataContext";
+
 export default function Intelligence() {
     const navigate = useNavigate();
+    const { graphData } = useData();
+
+    // Calculate Stats
+    const totalEntities = graphData.nodes.length;
+    const totalConnections = graphData.links.length;
+
+    // Top Industries
+    const industries: Record<string, number> = {};
+    graphData.nodes.forEach(node => {
+        if (node.group === 'company' && node.industry) {
+            industries[node.industry] = (industries[node.industry] || 0) + 1;
+        }
+    });
+    const topIndustries = Object.entries(industries)
+        .sort(([, a], [, b]) => b - a)
+        .slice(0, 3);
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
             <div>
                 <h1 className="text-3xl font-bold text-white mb-2">Intelligence</h1>
                 <p className="text-gray-400">AI-driven insights and strategic assessments.</p>
+            </div>
+
+            {/* Stats Overview */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h4 className="text-gray-400 text-sm font-medium mb-1">Total Network Size</h4>
+                    <p className="text-3xl font-bold text-white">{totalEntities}</p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h4 className="text-gray-400 text-sm font-medium mb-1">Connections</h4>
+                    <p className="text-3xl font-bold text-white">{totalConnections}</p>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+                    <h4 className="text-gray-400 text-sm font-medium mb-1">Top Industry</h4>
+                    <p className="text-xl font-bold text-white truncate">{topIndustries[0]?.[0] || 'N/A'}</p>
+                    <p className="text-xs text-gray-500">{topIndustries[0]?.[1] || 0} companies</p>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

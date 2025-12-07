@@ -26,6 +26,10 @@ interface DataContextType {
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
+import initialData from '../data/initialData.json';
+
+// ... imports
+
 export const DataProvider = ({ children }: { children: ReactNode }) => {
     const [graphData, setGraphData] = useState<GraphData>(() => {
         // Load from local storage if available
@@ -39,7 +43,8 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
                 }
             }
         }
-        return { nodes: [], links: [] };
+        // Fallback to seed data
+        return initialData as GraphData;
     });
 
     // Save to local storage whenever graphData changes
