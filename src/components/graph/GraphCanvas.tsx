@@ -28,7 +28,7 @@ export default function GraphCanvas({ onNodeClick, data }: GraphCanvasProps) {
                             if (group === 'event') return '#10b981';
                             return '#9ca3af';
                         }}
-                        nodeRelSize={4}
+                        nodeRelSize={2}
                         linkColor={() => 'rgba(255,255,255,0.2)'}
                         backgroundColor="#0B1120"
                         onNodeClick={(node) => {

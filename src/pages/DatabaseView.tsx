@@ -55,20 +55,27 @@ export default function DatabaseView() {
                     </button>
                     <button
                         onClick={() => {
-                            const name = prompt("Enter node name:");
+                            const name = prompt("Enter entity name:");
                             if (name) {
+                                const role = prompt("Enter role (e.g. CEO, Investor):") || "Unknown";
+                                const email = prompt("Enter email:") || "";
+                                const status = prompt("Enter status (Active, Lead, Closed):") || "Active";
+
                                 addNodes([{
                                     id: `manual-${Date.now()}`,
                                     name,
                                     group: "person",
                                     val: 20,
-                                    description: "Manually added"
+                                    description: "Manually added",
+                                    role,
+                                    email,
+                                    status
                                 }]);
                             }
                         }}
                         className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-medium transition-colors flex items-center gap-2"
                     >
-                        + Add Node
+                        + Add Entity
                     </button>
                 </div>
             </div>

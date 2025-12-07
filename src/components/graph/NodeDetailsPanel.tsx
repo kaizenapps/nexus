@@ -42,7 +42,7 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                         <div className="space-y-4">
                             <div className="flex items-center text-muted-foreground">
                                 <Building className="h-5 w-5 mr-3" />
-                                <span>Works at <strong>Kaizen Apps</strong></span>
+                                <span>{node.role || 'Unknown Role'}</span>
                             </div>
                             <div className="flex items-center text-muted-foreground">
                                 <Linkedin className="h-5 w-5 mr-3" />
@@ -50,7 +50,15 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                             </div>
                             <div className="flex items-center text-muted-foreground">
                                 <Mail className="h-5 w-5 mr-3" />
-                                <span>contact@example.com</span>
+                                <span>{node.email || 'No email'}</span>
+                            </div>
+                            <div className="flex items-center text-muted-foreground">
+                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${node.status === 'Active' ? 'bg-green-500/20 text-green-400' :
+                                        node.status === 'Lead' ? 'bg-yellow-500/20 text-yellow-400' :
+                                            'bg-gray-500/20 text-gray-400'
+                                    }`}>
+                                    {node.status || 'Active'}
+                                </span>
                             </div>
                         </div>
                     )}

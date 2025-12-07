@@ -10,6 +10,8 @@ import DashboardLayout from './layouts/DashboardLayout';
 
 import { DataProvider } from './context/DataContext';
 
+import GraphExplorer from './pages/GraphExplorer';
+
 function App() {
   return (
     <DataProvider>
@@ -18,6 +20,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
+            <Route path="graph" element={<GraphExplorer />} />
             <Route path="data" element={<DataSources />} />
             <Route path="database" element={<DatabaseView />} />
             <Route path="intelligence" element={<Intelligence />} />

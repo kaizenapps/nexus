@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { LayoutDashboard, Database, Brain, User, Settings, Cable, ChevronDown } from "lucide-react";
+import { LayoutDashboard, Database, Brain, User, Settings, Cable, ChevronDown, Share2 } from "lucide-react";
 import { useState } from "react";
 
 export default function DashboardLayout() {
@@ -8,6 +8,7 @@ export default function DashboardLayout() {
 
     const navItems = [
         { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
+        { icon: Share2, label: "Graph View", path: "/dashboard/graph" },
         { icon: Database, label: "Database", path: "/dashboard/database" },
         { icon: Cable, label: "Data Sources", path: "/dashboard/data" },
         { icon: Brain, label: "Intelligence", path: "/dashboard/intelligence" },
