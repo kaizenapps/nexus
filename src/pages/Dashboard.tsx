@@ -1,8 +1,19 @@
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight, Activity, Users, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useData } from "../context/DataContext";
 
 export default function Dashboard() {
     const navigate = useNavigate();
+    const { graphData } = useData();
+
+    // Calculate Real Stats
+    const totalEntities = graphData.nodes.length;
+    const totalConnections = graphData.links.length;
+
+    // Calculate unique countries (if available in data, else mock/count)
+    // Assuming 'billingAddressCountry' or similar might be in node data if we mapped it.
+    // For now, we'll just count nodes with a 'country' property if it exists, or keep it static if data is missing.
+    const uniqueCountries = new Set(graphData.nodes.map(n => n.country).filter(Boolean)).size || 1;
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
@@ -18,23 +29,23 @@ export default function Dashboard() {
                         <Users className="h-5 w-5 text-blue-400" />
                         <h4 className="font-medium text-white">Total Entities</h4>
                     </div>
-                    <p className="text-3xl font-bold text-white">1,248</p>
-                    <p className="text-sm text-gray-500">+24 this week</p>
+                    <p className="text-3xl font-bold text-white">{totalEntities}</p>
+                    <p className="text-sm text-gray-500">Across all categories</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
                     <div className="flex items-center gap-3 mb-2">
                         <Activity className="h-5 w-5 text-green-400" />
                         <h4 className="font-medium text-white">Active Connections</h4>
                     </div>
-                    <p className="text-3xl font-bold text-white">8,502</p>
-                    <p className="text-sm text-gray-500">High engagement</p>
+                    <p className="text-3xl font-bold text-white">{totalConnections}</p>
+                    <p className="text-sm text-gray-500">Total relationships</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
                     <div className="flex items-center gap-3 mb-2">
                         <Globe className="h-5 w-5 text-purple-400" />
                         <h4 className="font-medium text-white">Global Reach</h4>
                     </div>
-                    <p className="text-3xl font-bold text-white">14</p>
+                    <p className="text-3xl font-bold text-white">{uniqueCountries}</p>
                     <p className="text-sm text-gray-500">Countries represented</p>
                 </div>
             </div>

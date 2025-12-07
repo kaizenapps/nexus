@@ -1,5 +1,6 @@
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 
 import { useData } from "../context/DataContext";
 
@@ -21,6 +22,16 @@ export default function Intelligence() {
     const topIndustries = Object.entries(industries)
         .sort(([, a], [, b]) => b - a)
         .slice(0, 3);
+
+    // Mock Data for Radar Chart (Network Utilization vs Industry)
+    const radarData = [
+        { subject: 'Reach', A: 120, B: 110, fullMark: 150 },
+        { subject: 'Engagement', A: 98, B: 130, fullMark: 150 },
+        { subject: 'Growth', A: 86, B: 130, fullMark: 150 },
+        { subject: 'Diversity', A: 99, B: 100, fullMark: 150 },
+        { subject: 'Influence', A: 85, B: 90, fullMark: 150 },
+        { subject: 'Recency', A: 65, B: 85, fullMark: 150 },
+    ];
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
@@ -47,34 +58,46 @@ export default function Intelligence() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Assessment Radar Chart (Placeholder) */}
+                {/* Assessment Radar Chart */}
                 <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
                     <div className="flex items-center justify-between mb-6">
-                        <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+                        <div className="flex items-center gap-3">
                             <Target className="h-5 w-5 text-blue-400" />
-                            Assessment
-                        </h3>
-                        <span className="text-xs font-medium px-2 py-1 rounded-full bg-green-500/20 text-green-300">Live</span>
-                    </div>
-                    <div className="h-64 flex items-center justify-center relative">
-                        {/* Mock Radar Chart Visual */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-48 h-48 border border-white/10 rounded-full flex items-center justify-center">
-                                <div className="w-32 h-32 border border-white/10 rounded-full flex items-center justify-center">
-                                    <div className="w-16 h-16 border border-white/10 rounded-full bg-blue-500/10 animate-pulse"></div>
-                                </div>
-                            </div>
-                            {/* Radar Lines */}
-                            <div className="absolute w-full h-[1px] bg-white/5 rotate-0"></div>
-                            <div className="absolute w-full h-[1px] bg-white/5 rotate-60"></div>
-                            <div className="absolute w-full h-[1px] bg-white/5 rotate-120"></div>
-
-                            {/* Data Points */}
-                            <div className="absolute top-10 right-20 w-3 h-3 bg-purple-500 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.8)]"></div>
-                            <div className="absolute bottom-16 left-24 w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
-                            <div className="absolute top-24 left-16 w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.8)]"></div>
+                            <h3 className="text-lg font-semibold text-white">Network Assessment</h3>
                         </div>
-                        <p className="text-gray-500 text-sm mt-40">Network Composition Analysis</p>
+                        <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">
+                            Strong Performance
+                        </span>
+                    </div>
+                    <div className="h-[300px] w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
+                                <PolarGrid stroke="#374151" />
+                                <PolarAngleAxis dataKey="subject" tick={{ fill: '#9CA3AF', fontSize: 12 }} />
+                                <PolarRadiusAxis angle={30} domain={[0, 150]} tick={false} axisLine={false} />
+                                <Radar
+                                    name="My Network"
+                                    dataKey="A"
+                                    stroke="#3B82F6"
+                                    strokeWidth={2}
+                                    fill="#3B82F6"
+                                    fillOpacity={0.3}
+                                />
+                                <Radar
+                                    name="Industry Avg"
+                                    dataKey="B"
+                                    stroke="#10B981"
+                                    strokeWidth={2}
+                                    fill="#10B981"
+                                    fillOpacity={0.1}
+                                />
+                                <Legend wrapperStyle={{ paddingTop: '20px' }} />
+                                <Tooltip
+                                    contentStyle={{ backgroundColor: '#1F2937', borderColor: '#374151', color: '#F3F4F6' }}
+                                    itemStyle={{ color: '#F3F4F6' }}
+                                />
+                            </RadarChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
 

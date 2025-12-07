@@ -1,4 +1,5 @@
-import { X, MapPin, Building, Calendar, Mail, Linkedin } from "lucide-react";
+import { X, MapPin, Building, Calendar, Mail, Linkedin, Link as LinkIcon } from "lucide-react";
+import { useData } from "../../context/DataContext";
 
 interface NodeDetailsProps {
     node: any;
@@ -6,7 +7,26 @@ interface NodeDetailsProps {
 }
 
 export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
+    const { graphData, setGraphData } = useData();
+
     if (!node) return null;
+
+    const handleConnect = () => {
+        const targetName = prompt("Enter the name of the entity to connect to:");
+        if (!targetName) return;
+
+        const targetNode = graphData.nodes.find(n => n.name.toLowerCase() === targetName.toLowerCase());
+
+        if (targetNode) {
+            setGraphData(prev => ({
+                ...prev,
+                links: [...prev.links, { source: node.id, target: targetNode.id }]
+            }));
+            alert(`Connected ${node.name} to ${targetNode.name}`);
+        } else {
+            alert("Entity not found. Please check the name.");
+        }
+    };
 
     return (
         <div className="fixed inset-y-0 right-0 w-96 bg-background/95 backdrop-blur-xl border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-in-out z-50">
@@ -54,8 +74,8 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                             </div>
                             <div className="flex items-center text-muted-foreground">
                                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${node.status === 'Active' ? 'bg-green-500/20 text-green-400' :
-                                        node.status === 'Lead' ? 'bg-yellow-500/20 text-yellow-400' :
-                                            'bg-gray-500/20 text-gray-400'
+                                    node.status === 'Lead' ? 'bg-yellow-500/20 text-yellow-400' :
+                                        'bg-gray-500/20 text-gray-400'
                                     }`}>
                                     {node.status || 'Active'}
                                 </span>
@@ -76,7 +96,14 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
                     )}
 
                     {/* Actions */}
-                    <div className="pt-6 border-t border-white/10">
+                    <div className="pt-6 border-t border-white/10 space-y-3">
+                        <button
+                            onClick={handleConnect}
+                            className="w-full bg-white/10 hover:bg-white/20 text-white py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                        >
+                            <LinkIcon className="h-4 w-4" />
+                            Connect Entity
+                        </button>
                         <button className="w-full bg-primary hover:bg-primary/90 text-white py-2 rounded-lg font-medium transition-colors">
                             Enrich Data
                         </button>
