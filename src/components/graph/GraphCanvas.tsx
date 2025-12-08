@@ -67,6 +67,9 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
                             // }
                         }}
                         nodeCanvasObjectMode={() => 'replace'} // We take full control of drawing
+                        linkLineDash={(link: any) => link.type === 'proposed' ? [5, 5] : null}
+                        linkWidth={(link: any) => link.type === 'proposed' ? 2 : 1}
+                        linkColor={(link: any) => link.type === 'proposed' ? '#fbbf24' : 'rgba(255,255,255,0.2)'} // Amber for proposed
                         onNodeClick={(node) => {
                             if (onNodeClick) onNodeClick(node);
                         }}

@@ -51,9 +51,20 @@ export default function GraphExplorer() {
 
             const data = await res.json();
             if (data.success && data.data) {
-                // Merge new nodes/links with existing graph
-                // For this demo, we might just replace or append. Let's replace for clarity of "Objective View"
-                setGraphData(data.data);
+                // Merge new nodes/links with existing graph instead of replacing
+                setGraphData(prev => {
+                    const existingNodeIds = new Set(prev.nodes.map(n => n.id));
+                    const newNodes = data.data.nodes.filter((n: any) => !existingNodeIds.has(n.id));
+
+                    // Mark new links as 'proposed' for dotted lines
+                    const newLinks = data.data.links.map((l: any) => ({ ...l, type: 'proposed' }));
+
+                    return {
+                        nodes: [...prev.nodes, ...newNodes],
+                        links: [...prev.links, ...newLinks]
+                    };
+                });
+                alert(`Analysis complete. Added ${data.data.nodes.length} entities.`);
             } else {
                 console.error("Analysis failed", data.error);
             }
@@ -107,7 +118,7 @@ export default function GraphExplorer() {
                             }`}
                     >
                         <Sparkles className="h-4 w-4" />
-                        {isObjectiveMode ? "Nexus Mode" : "Enable Agent"}
+                        {isObjectiveMode ? "Nexus Mode Active" : "Nexus Mode"}
                     </button>
 
                     {/* Run Button (Only visible in Nexus Mode) */}

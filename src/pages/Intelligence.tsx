@@ -1,6 +1,6 @@
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 import { useData } from "../context/DataContext";
 
@@ -23,14 +23,35 @@ export default function Intelligence() {
         .sort(([, a], [, b]) => b - a)
         .slice(0, 3);
 
-    // Mock Data for Radar Chart (Network Utilization vs Industry)
+    // Network Composition Data (Role-based)
+    const roleCounts = {
+        Investors: 0,
+        Founders: 0,
+        Engineers: 0,
+        Sales: 0,
+        Product: 0,
+        Executives: 0
+    };
+
+    graphData.nodes.forEach(node => {
+        if (node.group === 'person' && node.role) {
+            const role = node.role.toLowerCase();
+            if (role.includes('investor') || role.includes('vc') || role.includes('partner')) roleCounts.Investors++;
+            else if (role.includes('founder') || role.includes('co-founder')) roleCounts.Founders++;
+            else if (role.includes('engineer') || role.includes('developer')) roleCounts.Engineers++;
+            else if (role.includes('sales') || role.includes('account')) roleCounts.Sales++;
+            else if (role.includes('product') || role.includes('manager')) roleCounts.Product++;
+            else if (role.includes('ceo') || role.includes('cto') || role.includes('vp') || role.includes('director')) roleCounts.Executives++;
+        }
+    });
+
     const radarData = [
-        { subject: 'Reach', A: 120, B: 110, fullMark: 150 },
-        { subject: 'Engagement', A: 98, B: 130, fullMark: 150 },
-        { subject: 'Growth', A: 86, B: 130, fullMark: 150 },
-        { subject: 'Diversity', A: 99, B: 100, fullMark: 150 },
-        { subject: 'Influence', A: 85, B: 90, fullMark: 150 },
-        { subject: 'Recency', A: 65, B: 85, fullMark: 150 },
+        { subject: 'Investors', count: roleCounts.Investors, fullMark: 20 },
+        { subject: 'Founders', count: roleCounts.Founders, fullMark: 20 },
+        { subject: 'Engineers', count: roleCounts.Engineers, fullMark: 20 },
+        { subject: 'Sales', count: roleCounts.Sales, fullMark: 20 },
+        { subject: 'Product', count: roleCounts.Product, fullMark: 20 },
+        { subject: 'Executives', count: roleCounts.Executives, fullMark: 20 },
     ];
 
     // Dynamic Next Move
@@ -41,9 +62,6 @@ export default function Intelligence() {
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
-            {/* ... Header & Stats ... */}
-            {/* (Keeping existing Stats code, just updating the Next Move section below) */}
-
             <div>
                 <h1 className="text-3xl font-bold text-white mb-2">Intelligence</h1>
                 <p className="text-gray-400">AI-driven insights and strategic assessments.</p>
@@ -67,15 +85,15 @@ export default function Intelligence() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Assessment Radar Chart */}
+                {/* Network Composition Radar Chart */}
                 <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
                     <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-3">
                             <Target className="h-5 w-5 text-blue-400" />
-                            <h3 className="text-lg font-semibold text-white">Network Assessment</h3>
+                            <h3 className="text-lg font-semibold text-white">Network Composition</h3>
                         </div>
                         <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs font-medium">
-                            Strong Performance
+                            Role Distribution
                         </span>
                     </div>
                     <div className="h-[300px] w-full">
@@ -83,24 +101,15 @@ export default function Intelligence() {
                             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
                                 <PolarGrid stroke="#374151" />
                                 <PolarAngleAxis dataKey="subject" tick={{ fill: '#9CA3AF', fontSize: 12 }} />
-                                <PolarRadiusAxis angle={30} domain={[0, 150]} tick={false} axisLine={false} />
+                                <PolarRadiusAxis angle={30} domain={[0, 'auto']} tick={false} axisLine={false} />
                                 <Radar
-                                    name="My Network"
-                                    dataKey="A"
+                                    name="Count"
+                                    dataKey="count"
                                     stroke="#3B82F6"
                                     strokeWidth={2}
                                     fill="#3B82F6"
                                     fillOpacity={0.3}
                                 />
-                                <Radar
-                                    name="Industry Avg"
-                                    dataKey="B"
-                                    stroke="#10B981"
-                                    strokeWidth={2}
-                                    fill="#10B981"
-                                    fillOpacity={0.1}
-                                />
-                                <Legend wrapperStyle={{ paddingTop: '20px' }} />
                                 <Tooltip
                                     contentStyle={{ backgroundColor: '#1F2937', borderColor: '#374151', color: '#F3F4F6' }}
                                     itemStyle={{ color: '#F3F4F6' }}

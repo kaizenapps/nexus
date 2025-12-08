@@ -25,14 +25,13 @@ export default function DashboardLayout() {
                     <span className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">NEXUS</span>
                 </div>
 
-                {/* Project Selector */}
-                <div className="px-4 mb-6">
+                {/* Project Selector (Hidden for now) */}
+                {/* <div className="px-4 mb-6">
                     <div className="relative group">
                         <button className="w-full flex items-center justify-between bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-colors">
                             <span className="truncate">{project}</span>
                             <ChevronDown className="h-4 w-4 opacity-50" />
                         </button>
-                        {/* Dropdown */}
                         <div className="absolute top-full left-0 w-full mt-1 bg-[#1a202c] border border-white/10 rounded-lg shadow-xl overflow-hidden hidden group-hover:block z-50">
                             <div className="p-1">
                                 <button onClick={() => setProject("Global Operations")} className="w-full text-left px-3 py-2 text-sm text-gray-300 hover:bg-white/10 rounded-md">Global Operations</button>
@@ -45,7 +44,7 @@ export default function DashboardLayout() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <nav className="flex-1 px-4 space-y-2">
                     {navItems.map((item) => {
