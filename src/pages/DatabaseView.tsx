@@ -3,7 +3,7 @@ import { useData } from "../context/DataContext";
 import { Search, ArrowUpDown, Filter, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function DatabaseView() {
-    const { graphData, addNodes } = useData();
+    const { graphData, setGraphData, addNodes } = useData();
     const [searchTerm, setSearchTerm] = useState("");
     const [sortConfig, setSortConfig] = useState<{ key: string; direction: 'asc' | 'desc' } | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
@@ -76,6 +76,60 @@ export default function DatabaseView() {
                         <option value="event" className="bg-gray-900">Events</option>
                     </select>
 
+                    <button
+                        onClick={() => {
+                            const duplicates = graphData.nodes.filter((n, i, self) =>
+                                self.findIndex(t => t.name.toLowerCase() === n.name.toLowerCase()) !== i
+                            );
+
+                            if (duplicates.length === 0) {
+                                alert("No duplicates found (100% name match).");
+                                return;
+                            }
+
+                            if (confirm(`Found ${duplicates.length} duplicate entities. Merge them?`)) {
+                                // Simple deduplication: Keep first instance, remap links
+                                const uniqueNodes: any[] = [];
+                                const nameMap = new Map<string, string>();
+
+                                graphData.nodes.forEach(node => {
+                                    const key = node.name.toLowerCase();
+                                    if (!nameMap.has(key)) {
+                                        nameMap.set(key, node.id);
+                                        uniqueNodes.push(node);
+                                    }
+                                });
+
+                                const newLinks = graphData.links.map(link => {
+                                    // Handle both D3 object references and raw ID strings
+                                    const sourceAny = link.source as any;
+                                    const targetAny = link.target as any;
+
+                                    const sourceId = typeof sourceAny === 'object' ? sourceAny.id : sourceAny;
+                                    const targetId = typeof targetAny === 'object' ? targetAny.id : targetAny;
+
+                                    // Find the name for the source/target to look up in nameMap
+                                    const sourceNode = graphData.nodes.find(n => n.id === sourceId);
+                                    const targetNode = graphData.nodes.find(n => n.id === targetId);
+
+                                    const sourceName = sourceNode?.name.toLowerCase();
+                                    const targetName = targetNode?.name.toLowerCase();
+
+                                    return {
+                                        source: (sourceName && nameMap.get(sourceName)) || sourceId,
+                                        target: (targetName && nameMap.get(targetName)) || targetId
+                                    };
+                                });
+
+                                setGraphData({ nodes: uniqueNodes, links: newLinks });
+                                alert("Deduplication complete.");
+                            }
+                        }}
+                        className="p-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 hover:text-white hover:bg-white/10"
+                        title="Deduplicate (100% Match)"
+                    >
+                        <span className="text-xs font-bold">Dedupe</span>
+                    </button>
                     <button
                         onClick={() => {
                             const name = prompt("Enter entity name:");

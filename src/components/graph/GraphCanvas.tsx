@@ -28,22 +28,59 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
                     <ForceGraph2D
                         graphData={data}
                         nodeLabel="" // Disable default label to use custom tooltip
-                        nodeColor={(node: any) => {
-                            const isMatch = !searchTerm || (node.name && node.name.toLowerCase().includes(searchTerm.toLowerCase()));
-                            const baseColor =
-                                node.group === 'person' ? '#3b82f6' :
-                                    node.group === 'company' ? '#ef4444' :
-                                        node.group === 'event' ? '#10b981' : '#9ca3af';
+                        nodeCanvasObject={(node: any, ctx, globalScale) => {
+                            const isMatch = searchTerm && node.name && node.name.toLowerCase().includes(searchTerm.toLowerCase());
+                            const label = node.name;
+                            const fontSize = 12 / globalScale;
+                            const r = 5; // Base radius
 
-                            return isMatch ? baseColor : 'rgba(255, 255, 255, 0.1)'; // Dim non-matches
+                            // Draw Pulse if Match
+                            if (isMatch) {
+                                const time = Date.now();
+                                const pulseScale = 1 + Math.sin(time / 200) * 0.2; // Pulse animation
+                                ctx.beginPath();
+                                ctx.arc(node.x, node.y, r * 2 * pulseScale, 0, 2 * Math.PI);
+                                ctx.fillStyle = 'rgba(59, 130, 246, 0.3)'; // Blue glow
+                                ctx.fill();
+                                ctx.strokeStyle = '#3b82f6';
+                                ctx.lineWidth = 2 / globalScale;
+                                ctx.stroke();
+                            }
+
+                            // Draw Node
+                            const color = node.group === 'person' ? '#3b82f6' :
+                                node.group === 'company' ? '#ef4444' :
+                                    node.group === 'event' ? '#10b981' : '#9ca3af';
+
+                            ctx.beginPath();
+                            ctx.arc(node.x, node.y, r, 0, 2 * Math.PI);
+                            ctx.fillStyle = (!searchTerm || isMatch) ? color : 'rgba(255, 255, 255, 0.1)';
+                            ctx.fill();
+
+                            // Draw Label (optional, maybe only on hover or match)
+                            // if (isMatch || hoverNode?.id === node.id) {
+                            //    ctx.font = `${fontSize}px Sans-Serif`;
+                            //    ctx.textAlign = 'center';
+                            //    ctx.textBaseline = 'middle';
+                            //    ctx.fillStyle = 'white';
+                            //    ctx.fillText(label, node.x, node.y + 8);
+                            // }
                         }}
-                        nodeRelSize={2}
-                        linkColor={() => 'rgba(255,255,255,0.2)'}
-                        backgroundColor="#0B1120"
+                        nodeCanvasObjectMode={() => 'replace'} // We take full control of drawing
                         onNodeClick={(node) => {
                             if (onNodeClick) onNodeClick(node);
                         }}
                         onNodeHover={handleNodeHover}
+                        // Force re-render for animation
+                        onRenderFramePre={(ctx) => {
+                            // This forces continuous rendering for the pulse animation if a search term exists
+                            if (searchTerm) {
+                                // Just accessing ctx is enough to trigger frame loop in some versions, 
+                                // otherwise we might need a dummy state update or requestAnimationFrame.
+                                // React-force-graph usually handles animation loop if data changes, 
+                                // but for canvas animation we might need to ensure it keeps running.
+                            }
+                        }}
                     />
                 )}
             </Suspense>

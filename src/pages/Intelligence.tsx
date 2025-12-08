@@ -133,10 +133,10 @@ export default function Intelligence() {
                         </div>
 
                         <button
-                            onClick={() => navigate(`/dashboard/database?search=${encodeURIComponent(nextMove.name)}`)}
+                            onClick={() => navigate(`/graph?search=${encodeURIComponent(nextMove.name)}`)}
                             className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                         >
-                            Execute Move <ChevronRight className="h-4 w-4" />
+                            Connect! <ChevronRight className="h-4 w-4" />
                         </button>
                     </div>
                 </div>

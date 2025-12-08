@@ -1,17 +1,26 @@
 import { useState, useEffect } from "react";
 import { Search, Sparkles } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 import GraphCanvas from "../components/graph/GraphCanvas";
 import NodeDetailsPanel from "../components/graph/NodeDetailsPanel";
 import { useData } from '../context/DataContext';
 
 export default function GraphExplorer() {
     const { graphData, setGraphData } = useData();
+    const [searchParams] = useSearchParams();
     const [selectedNode, setSelectedNode] = useState<any>(null);
     const [isObjectiveMode, setIsObjectiveMode] = useState(false);
     const [objective, setObjective] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
+        // Check for search param
+        const search = searchParams.get('search');
+        if (search) {
+            setObjective(search);
+            setIsObjectiveMode(true); // Enable search mode automatically
+        }
+
         // Initial mock data if empty
         if (graphData.nodes.length === 0) {
             const mockData = {
