@@ -29,7 +29,13 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
                         graphData={data}
                         nodeLabel="" // Disable default label to use custom tooltip
                         nodeCanvasObject={(node: any, ctx, globalScale) => {
-                            const isMatch = searchTerm && node.name && node.name.toLowerCase().includes(searchTerm.toLowerCase());
+                            const isMatch = searchTerm && (
+                                (node.name && node.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                                (node.role && node.role.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                                (node.description && node.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                                (node.industry && node.industry.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                                (node.group && node.group.toLowerCase().includes(searchTerm.toLowerCase()))
+                            );
                             const label = node.name;
                             const fontSize = 12 / globalScale;
                             const r = 5; // Base radius

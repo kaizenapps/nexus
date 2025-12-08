@@ -1,4 +1,5 @@
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight, Activity, Users, Globe } from "lucide-react";
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { useNavigate } from "react-router-dom";
 import { useData } from "../context/DataContext";
 
@@ -15,8 +16,40 @@ export default function Dashboard() {
     // For now, we'll just count nodes with a 'country' property if it exists, or keep it static if data is missing.
     const uniqueCountries = new Set(graphData.nodes.map(n => n.country).filter(Boolean)).size || 1;
 
+    // Network Composition Data (Role-based) - Synced with Intelligence.tsx
+    const roleCounts = {
+        Investors: 0,
+        Founders: 0,
+        Engineers: 0,
+        Sales: 0,
+        Product: 0,
+        Executives: 0
+    };
+
+    graphData.nodes.forEach(node => {
+        if (node.group === 'person' && node.role) {
+            const role = node.role.toLowerCase();
+            if (role.includes('investor') || role.includes('vc') || role.includes('partner')) roleCounts.Investors++;
+            else if (role.includes('founder') || role.includes('co-founder')) roleCounts.Founders++;
+            else if (role.includes('engineer') || role.includes('developer')) roleCounts.Engineers++;
+            else if (role.includes('sales') || role.includes('account')) roleCounts.Sales++;
+            else if (role.includes('product') || role.includes('manager')) roleCounts.Product++;
+            else if (role.includes('ceo') || role.includes('cto') || role.includes('vp') || role.includes('director')) roleCounts.Executives++;
+        }
+    });
+
+    const radarData = [
+        { subject: 'Investors', count: roleCounts.Investors, fullMark: 20 },
+        { subject: 'Founders', count: roleCounts.Founders, fullMark: 20 },
+        { subject: 'Engineers', count: roleCounts.Engineers, fullMark: 20 },
+        { subject: 'Sales', count: roleCounts.Sales, fullMark: 20 },
+        { subject: 'Product', count: roleCounts.Product, fullMark: 20 },
+        { subject: 'Executives', count: roleCounts.Executives, fullMark: 20 },
+    ];
+
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
+            {/* ... Header and Key Metrics ... */}
             <div>
                 <h1 className="text-3xl font-bold text-white mb-2">Dashboard</h1>
                 <p className="text-gray-400">Network overview and strategic intelligence.</p>
@@ -51,34 +84,35 @@ export default function Dashboard() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* Assessment Radar Chart (Reused from Intelligence) */}
+                {/* Network Composition Radar Chart */}
                 <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
                     <div className="flex items-center justify-between mb-6">
                         <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                             <Target className="h-5 w-5 text-blue-400" />
-                            Network Assessment
+                            Network Composition
                         </h3>
                         <span className="text-xs font-medium px-2 py-1 rounded-full bg-green-500/20 text-green-300">Live</span>
                     </div>
-                    <div className="h-64 flex items-center justify-center relative">
-                        {/* Mock Radar Chart Visual */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-48 h-48 border border-white/10 rounded-full flex items-center justify-center">
-                                <div className="w-32 h-32 border border-white/10 rounded-full flex items-center justify-center">
-                                    <div className="w-16 h-16 border border-white/10 rounded-full bg-blue-500/10 animate-pulse"></div>
-                                </div>
-                            </div>
-                            {/* Radar Lines */}
-                            <div className="absolute w-full h-[1px] bg-white/5 rotate-0"></div>
-                            <div className="absolute w-full h-[1px] bg-white/5 rotate-60"></div>
-                            <div className="absolute w-full h-[1px] bg-white/5 rotate-120"></div>
-
-                            {/* Data Points */}
-                            <div className="absolute top-10 right-20 w-3 h-3 bg-purple-500 rounded-full shadow-[0_0_10px_rgba(168,85,247,0.8)]"></div>
-                            <div className="absolute bottom-16 left-24 w-3 h-3 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
-                            <div className="absolute top-24 left-16 w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.8)]"></div>
-                        </div>
-                        <p className="text-gray-500 text-sm mt-40">Network Composition Analysis</p>
+                    <div className="h-[300px] w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
+                                <PolarGrid stroke="#374151" />
+                                <PolarAngleAxis dataKey="subject" tick={{ fill: '#9CA3AF', fontSize: 12 }} />
+                                <PolarRadiusAxis angle={30} domain={[0, 'auto']} tick={false} axisLine={false} />
+                                <Radar
+                                    name="Count"
+                                    dataKey="count"
+                                    stroke="#3B82F6"
+                                    strokeWidth={2}
+                                    fill="#3B82F6"
+                                    fillOpacity={0.3}
+                                />
+                                <Tooltip
+                                    contentStyle={{ backgroundColor: '#1F2937', borderColor: '#374151', color: '#F3F4F6' }}
+                                    itemStyle={{ color: '#F3F4F6' }}
+                                />
+                            </RadarChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
 
