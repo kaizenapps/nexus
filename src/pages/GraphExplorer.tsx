@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import GraphCanvas from "../components/graph/GraphCanvas";
 import NodeDetailsPanel from "../components/graph/NodeDetailsPanel";
 import { useData } from '../context/DataContext';
+import { cn } from "../lib/utils";
 
 export default function GraphExplorer() {
     const { graphData, setGraphData } = useData();
@@ -69,7 +70,10 @@ export default function GraphExplorer() {
                 <NodeDetailsPanel node={selectedNode} onClose={() => setSelectedNode(null)} />
             )}
 
-            <div className="absolute top-6 left-1/2 -translate-x-1/2 w-full max-w-2xl z-10 px-4 pointer-events-none">
+            <div className={cn(
+                "absolute top-6 w-full z-10 px-4 pointer-events-none transition-all duration-500 ease-in-out",
+                selectedNode ? "left-0 max-w-xl pl-6" : "left-1/2 -translate-x-1/2 max-w-2xl"
+            )}>
                 <div className="pointer-events-auto flex items-center space-x-3 bg-[#0B1120]/90 backdrop-blur-xl p-3 rounded-xl border-2 border-white/20 shadow-2xl transition-all duration-300 focus-within:border-primary focus-within:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
                     <div className="text-muted-foreground ml-1">
                         {isLoading ? <Sparkles className="h-6 w-6 text-purple-400 animate-spin" /> : (isObjectiveMode ? <Sparkles className="h-6 w-6 text-purple-400" /> : <Search className="h-6 w-6 text-white/70" />)}
