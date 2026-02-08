@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { Photo, Tag } from '../types/Gallery';
 
 // Re-export types if needed or just use them
 // Ideally these match the ones in analytics.ts, but keeping them here for now
@@ -26,6 +27,12 @@ interface DataContextType {
     setGraphData: React.Dispatch<React.SetStateAction<GraphData>>;
     addNodes: (newNodes: Node[]) => void;
     addGraphData: (newNodes: Node[], newLinks: Link[]) => void;
+
+    // Gallery State
+    photos: Photo[];
+    addPhoto: (photo: Photo) => void;
+    addTag: (tag: Tag) => void;
+    generatePhotoConnections: () => void;
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -51,12 +58,30 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         return initialData as GraphData;
     });
 
+    const [photos, setPhotos] = useState<Photo[]>(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('nexus_photos');
+            if (saved) {
+                try {
+                    return JSON.parse(saved);
+                } catch (e) { console.error(e); }
+            }
+        }
+        return [];
+    });
+
     // Save to local storage whenever graphData changes
     useEffect(() => {
         if (typeof window !== 'undefined') {
             localStorage.setItem('nexus_graph_data', JSON.stringify(graphData));
         }
     }, [graphData]);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('nexus_photos', JSON.stringify(photos));
+        }
+    }, [photos]);
 
     const addNodes = (newNodes: Node[]) => {
         setGraphData((prev) => {
@@ -95,8 +120,51 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         });
     };
 
+    const addPhoto = (photo: Photo) => {
+        setPhotos(prev => [photo, ...prev]);
+    };
+
+    const addTag = (tag: Tag) => {
+        setPhotos(prev => prev.map(p => {
+            if (p.id === tag.photoId) {
+                return { ...p, tags: [...p.tags, tag] };
+            }
+            return p;
+        }));
+    };
+
+    const generatePhotoConnections = () => {
+        const newLinks: Link[] = [];
+
+        photos.forEach(photo => {
+            if (photo.tags.length < 2) return;
+
+            // Create fully connected graph (clique) for tags in the same photo
+            for (let i = 0; i < photo.tags.length; i++) {
+                for (let j = i + 1; j < photo.tags.length; j++) {
+                    newLinks.push({
+                        source: photo.tags[i].nodeId,
+                        target: photo.tags[j].nodeId,
+                        type: 'photo_association',
+                        photoId: photo.id
+                    });
+                }
+            }
+        });
+
+        if (newLinks.length > 0) {
+            addGraphData([], newLinks);
+            alert(`Generated ${newLinks.length} new connections from photos.`);
+        } else {
+            alert("No new connections to generate. Tag more people in the same photos!");
+        }
+    };
+
     return (
-        <DataContext.Provider value={{ graphData, setGraphData, addNodes, addGraphData }}>
+        <DataContext.Provider value={{
+            graphData, setGraphData, addNodes, addGraphData,
+            photos, addPhoto, addTag, generatePhotoConnections
+        }}>
             {children}
         </DataContext.Provider>
     );
