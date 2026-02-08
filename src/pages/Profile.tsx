@@ -1,16 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Camera } from 'lucide-react';
 
 export default function Profile() {
-    const [profileImage, setProfileImage] = useState<string | null>(null);
-    const fileInputRef = useRef<HTMLInputElement>(null);
-
-    useEffect(() => {
-        const savedImage = localStorage.getItem('nexus_profile_photo');
-        if (savedImage) {
-            setProfileImage(savedImage);
+    const [profileImage, setProfileImage] = useState<string | null>(() => {
+        if (typeof window !== 'undefined') {
+            return localStorage.getItem('nexus_profile_photo');
         }
-    }, []);
+        return null;
+    });
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.target.files?.[0];

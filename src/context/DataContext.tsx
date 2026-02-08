@@ -1,5 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 
+// Re-export types if needed or just use them
+// Ideally these match the ones in analytics.ts, but keeping them here for now
 export interface Node {
     id: string;
     name: string;
@@ -9,8 +11,9 @@ export interface Node {
 }
 
 export interface Link {
-    source: string;
-    target: string;
+    source: string | { id: string };
+    target: string | { id: string };
+    [key: string]: any;
 }
 
 export interface GraphData {
@@ -22,6 +25,7 @@ interface DataContextType {
     graphData: GraphData;
     setGraphData: React.Dispatch<React.SetStateAction<GraphData>>;
     addNodes: (newNodes: Node[]) => void;
+    addGraphData: (newNodes: Node[], newLinks: Link[]) => void;
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -67,8 +71,32 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
         });
     };
 
+    const addGraphData = (newNodes: Node[], newLinks: Link[]) => {
+        setGraphData((prev) => {
+            const existingNodeIds = new Set(prev.nodes.map((n) => n.id));
+            const uniqueNewNodes = newNodes.filter((n) => !existingNodeIds.has(n.id));
+
+            // Helper to get ID from link source/target which might be object or string
+            const getId = (item: any) => (typeof item === 'object' ? item.id : item);
+
+            const existingLinks = new Set(prev.links.map(l => `${getId(l.source)}-${getId(l.target)}`));
+
+            const uniqueNewLinks = newLinks.filter(l => {
+                const sourceId = getId(l.source);
+                const targetId = getId(l.target);
+                // Also check reverse if undirected? Let's assume directed for now but unique
+                return !existingLinks.has(`${sourceId}-${targetId}`);
+            });
+
+            return {
+                nodes: [...prev.nodes, ...uniqueNewNodes],
+                links: [...prev.links, ...uniqueNewLinks]
+            };
+        });
+    };
+
     return (
-        <DataContext.Provider value={{ graphData, setGraphData, addNodes }}>
+        <DataContext.Provider value={{ graphData, setGraphData, addNodes, addGraphData }}>
             {children}
         </DataContext.Provider>
     );

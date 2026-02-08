@@ -1,50 +1,23 @@
-import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight, Activity, Users, Globe } from "lucide-react";
+import { Brain, Target, Zap, ChevronRight, Activity, Users, Globe } from "lucide-react";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { useNavigate } from "react-router-dom";
 import { useData } from "../context/DataContext";
+import { calculateGraphMetrics, findStrategicMove } from "../lib/analytics";
 
 export default function Dashboard() {
     const navigate = useNavigate();
     const { graphData } = useData();
 
-    // Calculate Real Stats
-    const totalEntities = graphData.nodes.length;
-    const totalConnections = graphData.links.length;
-
-    // Calculate unique countries (if available in data, else mock/count)
-    // Assuming 'billingAddressCountry' or similar might be in node data if we mapped it.
-    // For now, we'll just count nodes with a 'country' property if it exists, or keep it static if data is missing.
-    const uniqueCountries = new Set(graphData.nodes.map(n => n.country).filter(Boolean)).size || 1;
-
-    // Network Composition Data (Role-based) - Synced with Intelligence.tsx
-    const roleCounts = {
-        Investors: 0,
-        Founders: 0,
-        Engineers: 0,
-        Sales: 0,
-        Product: 0,
-        Executives: 0
-    };
-
-    graphData.nodes.forEach(node => {
-        if (node.group === 'person' && node.role) {
-            const role = node.role.toLowerCase();
-            if (role.includes('investor') || role.includes('vc') || role.includes('partner')) roleCounts.Investors++;
-            else if (role.includes('founder') || role.includes('co-founder')) roleCounts.Founders++;
-            else if (role.includes('engineer') || role.includes('developer')) roleCounts.Engineers++;
-            else if (role.includes('sales') || role.includes('account')) roleCounts.Sales++;
-            else if (role.includes('product') || role.includes('manager')) roleCounts.Product++;
-            else if (role.includes('ceo') || role.includes('cto') || role.includes('vp') || role.includes('director')) roleCounts.Executives++;
-        }
-    });
+    const metrics = calculateGraphMetrics(graphData.nodes, graphData.links);
+    const strategicMove = findStrategicMove(graphData.nodes, graphData.links);
 
     const radarData = [
-        { subject: 'Investors', count: roleCounts.Investors, fullMark: 20 },
-        { subject: 'Founders', count: roleCounts.Founders, fullMark: 20 },
-        { subject: 'Engineers', count: roleCounts.Engineers, fullMark: 20 },
-        { subject: 'Sales', count: roleCounts.Sales, fullMark: 20 },
-        { subject: 'Product', count: roleCounts.Product, fullMark: 20 },
-        { subject: 'Executives', count: roleCounts.Executives, fullMark: 20 },
+        { subject: 'Investors', count: metrics.roleCounts.Investors, fullMark: 20 },
+        { subject: 'Founders', count: metrics.roleCounts.Founders, fullMark: 20 },
+        { subject: 'Engineers', count: metrics.roleCounts.Engineers, fullMark: 20 },
+        { subject: 'Sales', count: metrics.roleCounts.Sales, fullMark: 20 },
+        { subject: 'Product', count: metrics.roleCounts.Product, fullMark: 20 },
+        { subject: 'Executives', count: metrics.roleCounts.Executives, fullMark: 20 },
     ];
 
     return (
@@ -62,7 +35,7 @@ export default function Dashboard() {
                         <Users className="h-5 w-5 text-blue-400" />
                         <h4 className="font-medium text-white">Total Entities</h4>
                     </div>
-                    <p className="text-3xl font-bold text-white">{totalEntities}</p>
+                    <p className="text-3xl font-bold text-white">{metrics.totalNodes}</p>
                     <p className="text-sm text-gray-500">Across all categories</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
@@ -70,7 +43,7 @@ export default function Dashboard() {
                         <Activity className="h-5 w-5 text-green-400" />
                         <h4 className="font-medium text-white">Active Connections</h4>
                     </div>
-                    <p className="text-3xl font-bold text-white">{totalConnections}</p>
+                    <p className="text-3xl font-bold text-white">{metrics.totalLinks}</p>
                     <p className="text-sm text-gray-500">Total relationships</p>
                 </div>
                 <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
@@ -78,7 +51,7 @@ export default function Dashboard() {
                         <Globe className="h-5 w-5 text-purple-400" />
                         <h4 className="font-medium text-white">Global Reach</h4>
                     </div>
-                    <p className="text-3xl font-bold text-white">{uniqueCountries}</p>
+                    <p className="text-3xl font-bold text-white">{metrics.uniqueCountries}</p>
                     <p className="text-sm text-gray-500">Countries represented</p>
                 </div>
             </div>
@@ -127,24 +100,30 @@ export default function Dashboard() {
                         Next Move
                     </h3>
 
-                    <div className="space-y-4 relative z-10">
-                        <div className="p-4 bg-black/40 rounded-lg border border-white/5">
-                            <p className="text-sm text-gray-400 mb-1">Strategic Opportunity</p>
-                            <p className="text-white font-medium">Connect with <span className="text-blue-400">Sarah Chen</span> (AI Research Lead)</p>
-                        </div>
+                    {strategicMove ? (
+                        <div className="space-y-4 relative z-10">
+                            <div className="p-4 bg-black/40 rounded-lg border border-white/5">
+                                <p className="text-sm text-gray-400 mb-1">Strategic Opportunity</p>
+                                <p className="text-white font-medium">Connect with <span className="text-blue-400">{strategicMove.name}</span> ({strategicMove.role})</p>
+                            </div>
 
-                        <div className="p-4 bg-black/40 rounded-lg border border-white/5">
-                            <p className="text-sm text-gray-400 mb-1">Rationale</p>
-                            <p className="text-gray-300 text-sm">High centrality in the "Generative Models" cluster. 85% match with your current objective.</p>
-                        </div>
+                            <div className="p-4 bg-black/40 rounded-lg border border-white/5">
+                                <p className="text-sm text-gray-400 mb-1">Rationale</p>
+                                <p className="text-gray-300 text-sm">{strategicMove.reason}</p>
+                            </div>
 
-                        <button
-                            onClick={() => navigate('/dashboard/database?search=Sarah%20Chen')}
-                            className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
-                        >
-                            Execute Move <ChevronRight className="h-4 w-4" />
-                        </button>
-                    </div>
+                            <button
+                                onClick={() => navigate(`/dashboard/database?search=${encodeURIComponent(strategicMove.name)}`)}
+                                className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                            >
+                                Execute Move <ChevronRight className="h-4 w-4" />
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="space-y-4 relative z-10">
+                            <p className="text-gray-300">No strategic moves identified yet. Add more data!</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

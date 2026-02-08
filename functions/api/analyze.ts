@@ -8,11 +8,26 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const { request, env } = context;
 
     try {
-        const { objective } = await request.json() as { objective: string };
+        let body: { objective: string };
+        try {
+            body = await request.json() as { objective: string };
+        } catch (e) {
+             // eslint-disable-next-line @typescript-eslint/no-unused-vars
+             const _ = e;
+            return new Response(JSON.stringify({ error: "Invalid JSON body" }), { status: 400 });
+        }
+
+        const { objective } = body;
+
+        if (!objective || typeof objective !== 'string' || objective.trim().length === 0) {
+            return new Response(JSON.stringify({ error: "Objective is required" }), { status: 400 });
+        }
+
         const openRouterKey = env.OPENROUTER_API_KEY;
 
         if (!openRouterKey) {
-            return new Response(JSON.stringify({ error: "OpenRouter API Key missing" }), { status: 500 });
+            console.error("OpenRouter API Key missing in environment variables");
+            return new Response(JSON.stringify({ error: "Server configuration error: API Key missing" }), { status: 500 });
         }
 
         // 1. Prompt AI to generate graph nodes
@@ -42,17 +57,29 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             }),
         });
 
-        const aiData = await aiResponse.json();
+        if (!aiResponse.ok) {
+            const errorText = await aiResponse.text();
+            console.error("AI API Error:", errorText);
+            return new Response(JSON.stringify({ error: "Failed to communicate with AI service" }), { status: 502 });
+        }
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const aiData: any = await aiResponse.json();
         const aiContent = aiData.choices?.[0]?.message?.content;
 
+        if (!aiContent) {
+            return new Response(JSON.stringify({ error: "AI returned empty response" }), { status: 502 });
+        }
+
         // Parse JSON from AI response (handle potential markdown code blocks)
-        let graphData = { nodes: [], links: [] };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        let graphData: { nodes: any[], links: any[] } = { nodes: [], links: [] };
         try {
             const cleanJson = aiContent.replace(/```json/g, "").replace(/```/g, "").trim();
             graphData = JSON.parse(cleanJson);
         } catch (e) {
             console.error("Failed to parse AI JSON", e);
-            // Fallback or error
+             return new Response(JSON.stringify({ error: "Failed to parse AI response" }), { status: 500 });
         }
 
         // 2. Enrich with Apify (LinkedIn) if applicable
@@ -74,12 +101,15 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             */
 
             // For now, we just mark them as 'enrichment_ready' to show we have the capability
-            // @ts-ignore
-            graphData.nodes = graphData.nodes.map(node => ({
-                ...node,
-                enriched: true,
-                enrichment_source: "Apify (Ready)"
-            }));
+            // @ts-expect-error - enriched is not in GraphNode type yet, but valid for JSON
+            if (graphData.nodes && Array.isArray(graphData.nodes)) {
+                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                 graphData.nodes = graphData.nodes.map((node: any) => ({
+                    ...node,
+                    enriched: true,
+                    enrichment_source: "Apify (Ready)"
+                }));
+            }
         }
 
         return new Response(JSON.stringify({
@@ -89,6 +119,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             headers: { "Content-Type": "application/json" },
         });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
         return new Response(JSON.stringify({ error: "Failed to analyze: " + error.message }), { status: 500 });
     }

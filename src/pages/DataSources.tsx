@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Upload, FileText, Database, CheckCircle, AlertCircle } from "lucide-react";
-import { useData, Node } from "../context/DataContext";
+import { useData } from "../context/DataContext";
+import { parseCSVData } from "../lib/csvParser";
 
 export default function DataSources() {
-    const { addNodes } = useData();
+    const { addGraphData } = useData();
     const [dragActive, setDragActive] = useState(false);
     const [uploadStatus, setUploadStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [message, setMessage] = useState("");
@@ -16,57 +17,6 @@ export default function DataSources() {
         } else if (e.type === "dragleave") {
             setDragActive(false);
         }
-    };
-
-    const parseCSV = (text: string) => {
-        const lines = text.split('\n');
-        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-
-        const nodes: Node[] = [];
-
-        // Detect type based on headers
-        const isAccount = headers.includes('billingAddressCity');
-        const isContact = headers.includes('firstName');
-
-        for (let i = 1; i < lines.length; i++) {
-            if (!lines[i].trim()) continue;
-
-            // Simple split by comma, handling quotes is harder without a library but let's try a basic regex split
-            // This regex splits by comma but ignores commas inside quotes
-            const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
-
-            if (!row) continue;
-
-            // Map row to object
-            const data: any = {};
-            row.forEach((val, index) => {
-                if (index < headers.length) {
-                    data[headers[index]] = val.replace(/^"|"$/g, '');
-                }
-            });
-
-            if (data.id) {
-                if (isAccount) {
-                    nodes.push({
-                        id: data.id,
-                        name: data.name || 'Unknown Company',
-                        group: 'company',
-                        val: 25,
-                        ...data
-                    });
-                } else if (isContact) {
-                    const fullName = `${data.firstName || ''} ${data.lastName || ''}`.trim() || data.name;
-                    nodes.push({
-                        id: data.id,
-                        name: fullName,
-                        group: 'person',
-                        val: 15,
-                        ...data
-                    });
-                }
-            }
-        }
-        return nodes;
     };
 
     const handleDrop = async (e: React.DragEvent) => {
@@ -95,10 +45,17 @@ export default function DataSources() {
 
         try {
             const text = await file.text();
-            const newNodes = parseCSV(text);
-            addNodes(newNodes);
+            const { nodes, links } = parseCSVData(text);
+
+            if (nodes.length === 0) {
+                 setUploadStatus('error');
+                 setMessage("No valid data found in CSV.");
+                 return;
+            }
+
+            addGraphData(nodes, links);
             setUploadStatus('success');
-            setMessage(`Successfully imported ${newNodes.length} nodes from ${file.name}`);
+            setMessage(`Successfully imported ${nodes.length} nodes and ${links.length} links from ${file.name}`);
         } catch (error) {
             console.error(error);
             setUploadStatus('error');
