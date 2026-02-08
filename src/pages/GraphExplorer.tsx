@@ -20,23 +20,7 @@ export default function GraphExplorer() {
             setObjective(search);
             setIsObjectiveMode(true); // Enable search mode automatically
         }
-
-        // Initial mock data if empty
-        if (graphData.nodes.length === 0) {
-            const mockData = {
-                nodes: [
-                    { id: '1', name: 'Preston Zen', group: 'person', val: 20, lat: 37.7749, lng: -122.4194 },
-                    { id: '2', name: 'Kaizen Apps', group: 'company', val: 30, lat: 37.7849, lng: -122.4094 },
-                    { id: '3', name: 'AI Conference 2024', group: 'event', val: 15, lat: 37.7649, lng: -122.4294 },
-                ],
-                links: [
-                    { source: '1', target: '2' },
-                    { source: '1', target: '3' },
-                ]
-            };
-            setGraphData(mockData);
-        }
-    }, []);
+    }, [searchParams]);
 
     const handleAnalyze = async () => {
         if (!objective.trim()) return;

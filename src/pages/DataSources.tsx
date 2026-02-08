@@ -1,12 +1,17 @@
 import { useState } from "react";
-import { Upload, FileText, Database, CheckCircle, AlertCircle } from "lucide-react";
-import { useData, Node } from "../context/DataContext";
+import { Upload, FileText, Database, CheckCircle, AlertCircle, RefreshCw } from "lucide-react";
+import { useData } from "../context/DataContext";
+import { parseCSVData } from "../lib/csvParser";
 
 export default function DataSources() {
-    const { addNodes } = useData();
+    const { addGraphData } = useData();
     const [dragActive, setDragActive] = useState(false);
     const [uploadStatus, setUploadStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [message, setMessage] = useState("");
+
+    // Enrichment State
+    const [isEnriching, setIsEnriching] = useState(false);
+    const [enrichmentTarget, setEnrichmentTarget] = useState("");
 
     const handleDrag = (e: React.DragEvent) => {
         e.preventDefault();
@@ -16,57 +21,6 @@ export default function DataSources() {
         } else if (e.type === "dragleave") {
             setDragActive(false);
         }
-    };
-
-    const parseCSV = (text: string) => {
-        const lines = text.split('\n');
-        const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
-
-        const nodes: Node[] = [];
-
-        // Detect type based on headers
-        const isAccount = headers.includes('billingAddressCity');
-        const isContact = headers.includes('firstName');
-
-        for (let i = 1; i < lines.length; i++) {
-            if (!lines[i].trim()) continue;
-
-            // Simple split by comma, handling quotes is harder without a library but let's try a basic regex split
-            // This regex splits by comma but ignores commas inside quotes
-            const row = lines[i].match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
-
-            if (!row) continue;
-
-            // Map row to object
-            const data: any = {};
-            row.forEach((val, index) => {
-                if (index < headers.length) {
-                    data[headers[index]] = val.replace(/^"|"$/g, '');
-                }
-            });
-
-            if (data.id) {
-                if (isAccount) {
-                    nodes.push({
-                        id: data.id,
-                        name: data.name || 'Unknown Company',
-                        group: 'company',
-                        val: 25,
-                        ...data
-                    });
-                } else if (isContact) {
-                    const fullName = `${data.firstName || ''} ${data.lastName || ''}`.trim() || data.name;
-                    nodes.push({
-                        id: data.id,
-                        name: fullName,
-                        group: 'person',
-                        val: 15,
-                        ...data
-                    });
-                }
-            }
-        }
-        return nodes;
     };
 
     const handleDrop = async (e: React.DragEvent) => {
@@ -95,14 +49,46 @@ export default function DataSources() {
 
         try {
             const text = await file.text();
-            const newNodes = parseCSV(text);
-            addNodes(newNodes);
+            const { nodes, links } = parseCSVData(text);
+
+            if (nodes.length === 0) {
+                 setUploadStatus('error');
+                 setMessage("No valid data found in CSV.");
+                 return;
+            }
+
+            addGraphData(nodes, links);
             setUploadStatus('success');
-            setMessage(`Successfully imported ${newNodes.length} nodes from ${file.name}`);
+            setMessage(`Successfully imported ${nodes.length} nodes and ${links.length} links from ${file.name}`);
         } catch (error) {
             console.error(error);
             setUploadStatus('error');
             setMessage("Failed to parse CSV file.");
+        }
+    };
+
+    const handleEnrichment = async () => {
+        if (!enrichmentTarget.trim()) return;
+        setIsEnriching(true);
+        try {
+            const res = await fetch('/api/enrich', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ domain: enrichmentTarget })
+            });
+
+            const data = await res.json();
+            if (data.data) {
+                alert(`Found ${data.data.emails?.length || 0} emails for ${enrichmentTarget}`);
+                // In a real app, we would add these to the graph or update existing nodes
+            } else {
+                alert(data.error || "Enrichment failed or no data found.");
+            }
+        } catch (e) {
+            console.error(e);
+            alert("Enrichment request failed.");
+        } finally {
+            setIsEnriching(false);
         }
     };
 
@@ -161,6 +147,39 @@ export default function DataSources() {
                     )}
                 </div>
 
+                {/* Enrichment Card */}
+                <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 bg-orange-500/20 rounded-lg">
+                            <RefreshCw className="h-6 w-6 text-orange-400" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">Manual Enrichment</h3>
+                            <p className="text-sm text-gray-400">Enrich a domain via Hunter.io</p>
+                        </div>
+                    </div>
+
+                    <div className="space-y-4">
+                        <div>
+                            <label className="block text-sm text-gray-400 mb-1">Target Domain</label>
+                            <input
+                                type="text"
+                                value={enrichmentTarget}
+                                onChange={(e) => setEnrichmentTarget(e.target.value)}
+                                placeholder="e.g. stripe.com"
+                                className="w-full bg-black/20 border border-white/10 rounded-lg px-3 py-2 text-white placeholder:text-gray-600 focus:outline-none focus:border-orange-500/50"
+                            />
+                        </div>
+                        <button
+                            onClick={handleEnrichment}
+                            disabled={isEnriching || !enrichmentTarget}
+                            className="w-full py-2 bg-orange-500/20 text-orange-400 rounded-lg font-medium hover:bg-orange-500/30 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+                        >
+                            {isEnriching ? <RefreshCw className="h-4 w-4 animate-spin" /> : 'Enrich Domain'}
+                        </button>
+                    </div>
+                </div>
+
                 {/* Database Connector Placeholder */}
                 <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm opacity-50">
                     <div className="flex items-center gap-3 mb-4">
@@ -177,7 +196,7 @@ export default function DataSources() {
                     </div>
                 </div>
 
-                {/* Enrichment Services */}
+                {/* Enrichment Services Status */}
                 <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-orange-500/50 transition-colors cursor-pointer group">
                         <div className="flex items-center gap-3 mb-2">
@@ -190,7 +209,8 @@ export default function DataSources() {
                         </div>
                     </div>
 
-                    <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-blue-500/50 transition-colors cursor-pointer group">
+                    {/* ... other services ... */}
+                     <div className="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm hover:border-blue-500/50 transition-colors cursor-pointer group">
                         <div className="flex items-center gap-3 mb-2">
                             <div className="h-8 w-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-500 font-bold">A</div>
                             <h3 className="text-lg font-semibold text-white">Apify</h3>

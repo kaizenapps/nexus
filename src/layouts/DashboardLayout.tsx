@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { LayoutDashboard, Database, Brain, User, Settings, Cable, ChevronDown, Share2 } from "lucide-react";
+import { LayoutDashboard, Database, Brain, User, Settings, Cable, ChevronDown, Share2, Image } from "lucide-react";
 import { useState } from "react";
 
 export default function DashboardLayout() {
@@ -12,6 +12,7 @@ export default function DashboardLayout() {
         { icon: Database, label: "Database", path: "/dashboard/database" },
         { icon: Cable, label: "Data Sources", path: "/dashboard/data" },
         { icon: Brain, label: "Intelligence", path: "/dashboard/intelligence" },
+        { icon: Image, label: "Gallery", path: "/dashboard/gallery" },
         { icon: User, label: "Profile", path: "/dashboard/profile" },
         { icon: Settings, label: "Settings", path: "/dashboard/settings" },
     ];
@@ -72,7 +73,7 @@ export default function DashboardLayout() {
                         </div>
                         <div className="flex-1 min-w-0">
                             <p className="text-sm font-medium text-white truncate">Preston Zen</p>
-                            <p className="text-xs text-gray-500 truncate">preston@kaizen.com</p>
+                            <p className="text-xs text-gray-500 truncate">prestonzen@kaizenapps.com</p>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import DataSources from './pages/DataSources';
 import DatabaseView from './pages/DatabaseView';
 import Intelligence from './pages/Intelligence';
+import Gallery from './pages/Gallery';
 import Profile from './pages/Profile';
 import Settings from './pages/Settings';
 import DashboardLayout from './layouts/DashboardLayout';
@@ -24,6 +25,7 @@ function App() {
             <Route path="data" element={<DataSources />} />
             <Route path="database" element={<DatabaseView />} />
             <Route path="intelligence" element={<Intelligence />} />
+            <Route path="gallery" element={<Gallery />} />
             <Route path="profile" element={<Profile />} />
             <Route path="settings" element={<Settings />} />
           </Route>
