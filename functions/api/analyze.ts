@@ -37,10 +37,11 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       
       Generate a JSON object representing a social graph that helps achieve this objective.
       The graph should include:
-      - "nodes": Array of objects with { "id": string, "name": string, "group": "person" | "company" | "event", "description": string }
+      - "nodes": Array of objects with { "id": string, "name": string, "group": "person" | "company" | "event", "description": string, "linkedinUrl"?: string }
       - "links": Array of objects with { "source": string, "target": string, "type": string }
       
       Create at least 5-8 relevant nodes (mix of people, companies, events).
+      For 'person' nodes, try to infer a plausible 'linkedinUrl' if appropriate (e.g., https://www.linkedin.com/in/name).
       Ensure "id"s are unique strings.
       Return ONLY valid JSON.
     `;
@@ -84,30 +85,59 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
         // 2. Enrich with Apify (LinkedIn) if applicable
         const apifyToken = env.APIFY_API_TOKEN;
-        if (apifyToken) {
-            // Filter for nodes that might have LinkedIn URLs (or we could ask AI to generate them)
-            // For this demo, we'll assume the AI might have added a 'linkedinUrl' field, or we simulate it.
-            // Realistically, we would need to search for the profile first.
+        if (apifyToken && graphData.nodes && Array.isArray(graphData.nodes)) {
+            // Filter for nodes that have LinkedIn URLs
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const nodesWithLinkedin = graphData.nodes.filter((node: any) => node.linkedinUrl && typeof node.linkedinUrl === 'string' && node.linkedinUrl.includes('linkedin.com'));
 
-            // Example: If we had a URL, we would call Apify
-            /*
-            const run = await fetch(`https://api.apify.com/v2/acts/dev_fusion~linkedin-profile-scraper/run-sync-get-dataset-items?token=${apifyToken}`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    startUrls: [{ url: "https://www.linkedin.com/in/example" }] 
-                })
-            });
-            */
+            if (nodesWithLinkedin.length > 0) {
+                try {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const startUrls = nodesWithLinkedin.map((node: any) => ({ url: node.linkedinUrl }));
 
-            // For now, we just mark them as 'enrichment_ready' to show we have the capability
-            // @ts-expect-error - enriched is not in GraphNode type yet, but valid for JSON
-            if (graphData.nodes && Array.isArray(graphData.nodes)) {
+                    const apifyResponse = await fetch(`https://api.apify.com/v2/acts/dev_fusion~linkedin-profile-scraper/run-sync-get-dataset-items?token=${apifyToken}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            startUrls: startUrls
+                        })
+                    });
+
+                    if (apifyResponse.ok) {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        const enrichedData: any[] = await apifyResponse.json();
+
+                        // Map enriched data back to nodes
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        graphData.nodes = graphData.nodes.map((node: any) => {
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            const enrichedInfo = enrichedData.find((item: any) => item.input?.url === node.linkedinUrl);
+                            if (enrichedInfo) {
+                                return {
+                                    ...node,
+                                    headline: enrichedInfo.headline,
+                                    summary: enrichedInfo.summary,
+                                    profilePic: enrichedInfo.profilePic,
+                                    enriched: true,
+                                    enrichment_source: "Apify (LinkedIn)"
+                                };
+                            }
+                            return node;
+                        });
+                    } else {
+                        console.error("Apify API Error:", await apifyResponse.text());
+                    }
+                } catch (e) {
+                    console.error("Failed to enrich with Apify", e);
+                    // Continue without enrichment
+                }
+            } else {
+                 // Just mark as ready if no URLs found but token exists
                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                  graphData.nodes = graphData.nodes.map((node: any) => ({
                     ...node,
-                    enriched: true,
-                    enrichment_source: "Apify (Ready)"
+                    enriched: false,
+                    enrichment_source: "Apify (Ready - No URL)"
                 }));
             }
         }
