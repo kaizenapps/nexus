@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState, useCallback } from 'react';
+import { lazy, Suspense, useState, useCallback, useMemo } from 'react';
 
 // Lazy load ForceGraph to avoid SSR/build issues with some bundlers
 const ForceGraph2D = lazy(() => import('react-force-graph-2d'));
@@ -21,6 +21,25 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
         setHoverNode(node || null);
     }, []);
 
+    // Optimization: Pre-calculate matched nodes to avoid string operations in render loop
+    const matchedNodeIds = useMemo(() => {
+        const ids = new Set<string>();
+        if (!searchTerm || !data?.nodes) return ids;
+
+        const lowerTerm = searchTerm.toLowerCase();
+        data.nodes.forEach((node: any) => {
+            const isMatch = (
+                (node.name && node.name.toLowerCase().includes(lowerTerm)) ||
+                (node.role && node.role.toLowerCase().includes(lowerTerm)) ||
+                (node.description && node.description.toLowerCase().includes(lowerTerm)) ||
+                (node.industry && node.industry.toLowerCase().includes(lowerTerm)) ||
+                (node.group && node.group.toLowerCase().includes(lowerTerm))
+            );
+            if (isMatch) ids.add(node.id);
+        });
+        return ids;
+    }, [data, searchTerm]);
+
     return (
         <div className="w-full h-full bg-[#0B1120] relative">
             <Suspense fallback={<div className="flex items-center justify-center h-full text-white/50">Loading Graph...</div>}>
@@ -29,15 +48,7 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
                         graphData={data}
                         nodeLabel="" // Disable default label to use custom tooltip
                         nodeCanvasObject={(node: any, ctx, globalScale) => {
-                            const isMatch = searchTerm && (
-                                (node.name && node.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                                (node.role && node.role.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                                (node.description && node.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                                (node.industry && node.industry.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                                (node.group && node.group.toLowerCase().includes(searchTerm.toLowerCase()))
-                            );
-                            const label = node.name;
-                            const fontSize = 12 / globalScale;
+                            const isMatch = matchedNodeIds.has(node.id);
                             const r = 5; // Base radius
 
                             // Draw Pulse if Match
@@ -62,15 +73,6 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
                             ctx.arc(node.x, node.y, r, 0, 2 * Math.PI);
                             ctx.fillStyle = (!searchTerm || isMatch) ? color : 'rgba(255, 255, 255, 0.1)';
                             ctx.fill();
-
-                            // Draw Label (optional, maybe only on hover or match)
-                            // if (isMatch || hoverNode?.id === node.id) {
-                            //    ctx.font = `${fontSize}px Sans-Serif`;
-                            //    ctx.textAlign = 'center';
-                            //    ctx.textBaseline = 'middle';
-                            //    ctx.fillStyle = 'white';
-                            //    ctx.fillText(label, node.x, node.y + 8);
-                            // }
                         }}
                         nodeCanvasObjectMode={() => 'replace'} // We take full control of drawing
                         linkLineDash={(link: any) => link.type === 'proposed' ? [5, 5] : null}
@@ -81,7 +83,7 @@ export default function GraphCanvas({ onNodeClick, data, searchTerm = "" }: Grap
                         }}
                         onNodeHover={handleNodeHover}
                         // Force re-render for animation
-                        onRenderFramePre={(ctx) => {
+                        onRenderFramePre={(_ctx) => {
                             // This forces continuous rendering for the pulse animation if a search term exists
                             if (searchTerm) {
                                 // Just accessing ctx is enough to trigger frame loop in some versions, 
