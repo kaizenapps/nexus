@@ -8,12 +8,20 @@ export interface Node {
     name: string;
     group: string; // 'person' | 'company' | 'investor' | 'event'
     val: number;
+    role?: string;
+    industry?: string;
+    description?: string;
+    location?: string;
+    email?: string;
+    linkedin?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any; // Allow extra properties
 }
 
 export interface Link {
     source: string | { id: string };
     target: string | { id: string };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
 }
 
@@ -102,6 +110,7 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
             const uniqueNewNodes = newNodes.filter((n) => !existingNodeIds.has(n.id));
 
             // Helper to get ID from link source/target which might be object or string
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const getId = (item: any) => (typeof item === 'object' ? item.id : item);
 
             const existingLinks = new Set(prev.links.map(l => `${getId(l.source)}-${getId(l.target)}`));

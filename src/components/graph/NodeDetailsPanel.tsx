@@ -1,9 +1,9 @@
 import { X, MapPin, Building, Mail, Linkedin, Link as LinkIcon, Sparkles, Plus, CircleDashed } from "lucide-react";
-import { useData } from "../../context/DataContext";
+import { useData, Node } from "../../context/DataContext";
 import { useState } from "react";
 
 interface NodeDetailsProps {
-    node: any;
+    node: Node;
     onClose: () => void;
 }
 
@@ -15,7 +15,7 @@ export default function NodeDetailsPanel({ node, onClose }: NodeDetailsProps) {
 
     if (!node) return null;
 
-    const handleConnect = (targetNode: any, type: 'solid' | 'proposed') => {
+    const handleConnect = (targetNode: Node, type: 'solid' | 'proposed') => {
         setGraphData(prev => ({
             ...prev,
             links: [...prev.links, { source: node.id, target: targetNode.id, type }]
