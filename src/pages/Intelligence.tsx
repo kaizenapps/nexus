@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Brain, TrendingUp, Target, Shield, Zap, ChevronRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
@@ -13,52 +14,63 @@ export default function Intelligence() {
     const totalConnections = graphData.links.length;
 
     // Top Industries
-    const industries: Record<string, number> = {};
-    graphData.nodes.forEach(node => {
-        if (node.group === 'company' && node.industry) {
-            industries[node.industry] = (industries[node.industry] || 0) + 1;
-        }
-    });
-    const topIndustries = Object.entries(industries)
-        .sort(([, a], [, b]) => b - a)
-        .slice(0, 3);
+    const industries = useMemo(() => {
+        const counts: Record<string, number> = {};
+        graphData.nodes.forEach(node => {
+            if (node.group === 'company' && node.industry) {
+                counts[node.industry] = (counts[node.industry] || 0) + 1;
+            }
+        });
+        return counts;
+    }, [graphData]);
+
+    const topIndustries = useMemo(() => {
+        return Object.entries(industries)
+            .sort(([, a], [, b]) => b - a)
+            .slice(0, 3);
+    }, [industries]);
 
     // Network Composition Data (Role-based)
-    const roleCounts = {
-        Investors: 0,
-        Founders: 0,
-        Engineers: 0,
-        Sales: 0,
-        Product: 0,
-        Executives: 0
-    };
+    const roleCounts = useMemo(() => {
+        const counts = {
+            Investors: 0,
+            Founders: 0,
+            Engineers: 0,
+            Sales: 0,
+            Product: 0,
+            Executives: 0
+        };
 
-    graphData.nodes.forEach(node => {
-        if (node.group === 'person' && node.role) {
-            const role = node.role.toLowerCase();
-            if (role.includes('investor') || role.includes('vc') || role.includes('partner')) roleCounts.Investors++;
-            else if (role.includes('founder') || role.includes('co-founder')) roleCounts.Founders++;
-            else if (role.includes('engineer') || role.includes('developer')) roleCounts.Engineers++;
-            else if (role.includes('sales') || role.includes('account')) roleCounts.Sales++;
-            else if (role.includes('product') || role.includes('manager')) roleCounts.Product++;
-            else if (role.includes('ceo') || role.includes('cto') || role.includes('vp') || role.includes('director')) roleCounts.Executives++;
-        }
-    });
+        graphData.nodes.forEach(node => {
+            if (node.group === 'person' && node.role) {
+                const role = node.role.toLowerCase();
+                if (role.includes('investor') || role.includes('vc') || role.includes('partner')) counts.Investors++;
+                else if (role.includes('founder') || role.includes('co-founder')) counts.Founders++;
+                else if (role.includes('engineer') || role.includes('developer')) counts.Engineers++;
+                else if (role.includes('sales') || role.includes('account')) counts.Sales++;
+                else if (role.includes('product') || role.includes('manager')) counts.Product++;
+                else if (role.includes('ceo') || role.includes('cto') || role.includes('vp') || role.includes('director')) counts.Executives++;
+            }
+        });
+        return counts;
+    }, [graphData]);
 
-    const radarData = [
+    const radarData = useMemo(() => [
         { subject: 'Investors', count: roleCounts.Investors, fullMark: 20 },
         { subject: 'Founders', count: roleCounts.Founders, fullMark: 20 },
         { subject: 'Engineers', count: roleCounts.Engineers, fullMark: 20 },
         { subject: 'Sales', count: roleCounts.Sales, fullMark: 20 },
         { subject: 'Product', count: roleCounts.Product, fullMark: 20 },
         { subject: 'Executives', count: roleCounts.Executives, fullMark: 20 },
-    ];
+    ], [roleCounts]);
 
     // Dynamic Next Move
-    const potentialMoves = graphData.nodes.filter(n => n.group === 'person' && n.name !== 'Preston Zen');
-    const nextMove = potentialMoves.length > 0
-        ? potentialMoves[Math.floor(Math.random() * potentialMoves.length)]
-        : { name: 'Sarah Chen', role: 'AI Research Lead', id: 'mock-sarah' };
+    const nextMove = useMemo(() => {
+        const potentialMoves = graphData.nodes.filter(n => n.group === 'person' && n.name !== 'Preston Zen');
+        return potentialMoves.length > 0
+            ? potentialMoves[Math.floor(Math.random() * potentialMoves.length)]
+            : { name: 'Sarah Chen', role: 'AI Research Lead', id: 'mock-sarah' };
+    }, [graphData]);
 
     return (
         <div className="p-8 max-w-7xl mx-auto space-y-8">
