@@ -57,11 +57,14 @@ try {
     const nodes = [];
     const links = [];
 
+    const accountMap = new Map();
+
     // Process Accounts
     accounts.forEach(acc => {
         if (!acc.name) return;
+        const id = acc.id || `acc-${Math.random()}`;
         nodes.push({
-            id: acc.id || `acc-${Math.random()}`,
+            id: id,
             name: acc.name,
             group: 'company',
             val: 20, // Size
@@ -69,6 +72,7 @@ try {
             website: acc.website,
             description: acc.description || 'Imported Account'
         });
+        accountMap.set(acc.name, id);
     });
 
     // Process Contacts
@@ -95,11 +99,11 @@ try {
             });
         } else if (con.accountName) {
             // Try to find account by name
-            const acc = nodes.find(n => n.group === 'company' && n.name === con.accountName);
-            if (acc) {
+            const accId = accountMap.get(con.accountName);
+            if (accId) {
                 links.push({
                     source: contactId,
-                    target: acc.id
+                    target: accId
                 });
             }
         }
