@@ -7,6 +7,7 @@
     "dev": "vite",
     "start:local": "wrangler pages dev -- npm run dev",
     "build": "tsc && vite build",
+    "seed": "tsx scripts/generate_seed.ts",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest"
@@ -41,6 +42,7 @@
     "globals": "^16.5.0",
     "jsdom": "^28.0.0",
     "papaparse": "^5.5.3",
+    "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^5.4.21",

@@ -52,12 +52,17 @@ describe('parseCSVData', () => {
         expect(result.links.length).toBe(0);
     });
 
-    it('should handle custom name field if firstName/lastName missing', () => {
-         const csv = `id,name,role
+    it('should handle name and role fields as Contact', () => {
+        const csv = `id,name,role
 101,John Doe,Developer`;
-         // This might fail detection if we rely on firstName/lastName, let's check headers logic
-         // headers.includes('firstName') is false.
-         // headers.includes('billingAddressCity') is false.
-         // fallback to unknown? or refine logic.
+
+        const result = parseCSVData(csv);
+
+        expect(result.type).toBe('contact');
+        expect(result.nodes.length).toBe(1);
+        const person = result.nodes[0];
+        expect(person.name).toBe('John Doe');
+        expect(person.role).toBe('Developer');
+        expect(person.group).toBe('person');
     });
 });
