@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useData } from "../context/DataContext";
-import { Search, ArrowUpDown, Filter, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function DatabaseView() {
     const { graphData, setGraphData, addNodes } = useData();
@@ -19,28 +19,32 @@ export default function DatabaseView() {
         setSortConfig({ key, direction });
     };
 
-    const filteredNodes = [...(graphData.nodes || [])].filter(node => {
-        const matchesSearch = (node.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
-            (node.group && node.group.toLowerCase().includes(searchTerm.toLowerCase()));
+    const filteredNodes = useMemo(() => {
+        return (graphData.nodes || []).filter(node => {
+            const matchesSearch = (node.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+                (node.group && node.group.toLowerCase().includes(searchTerm.toLowerCase()));
 
-        const matchesGroup = filterGroup === 'all' || node.group === filterGroup;
+            const matchesGroup = filterGroup === 'all' || node.group === filterGroup;
 
-        return matchesSearch && matchesGroup;
-    });
+            return matchesSearch && matchesGroup;
+        });
+    }, [graphData.nodes, searchTerm, filterGroup]);
 
-    const sortedNodes = filteredNodes.sort((a, b) => {
-        if (!sortConfig) return 0;
-        const aValue = a[sortConfig.key] || '';
-        const bValue = b[sortConfig.key] || '';
+    const sortedNodes = useMemo(() => {
+        return [...filteredNodes].sort((a, b) => {
+            if (!sortConfig) return 0;
+            const aValue = a[sortConfig.key] || '';
+            const bValue = b[sortConfig.key] || '';
 
-        if (aValue < bValue) {
-            return sortConfig.direction === 'asc' ? -1 : 1;
-        }
-        if (aValue > bValue) {
-            return sortConfig.direction === 'asc' ? 1 : -1;
-        }
-        return 0;
-    });
+            if (aValue < bValue) {
+                return sortConfig.direction === 'asc' ? -1 : 1;
+            }
+            if (aValue > bValue) {
+                return sortConfig.direction === 'asc' ? 1 : -1;
+            }
+            return 0;
+        });
+    }, [filteredNodes, sortConfig]);
 
     const totalPages = Math.ceil(sortedNodes.length / itemsPerPage);
     const paginatedNodes = sortedNodes.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
