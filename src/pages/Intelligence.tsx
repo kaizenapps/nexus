@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 
 import { useData } from "../context/DataContext";
+import { getNetworkComposition } from "../lib/graphUtils";
 
 export default function Intelligence() {
     const navigate = useNavigate();
@@ -24,35 +25,7 @@ export default function Intelligence() {
         .slice(0, 3);
 
     // Network Composition Data (Role-based)
-    const roleCounts = {
-        Investors: 0,
-        Founders: 0,
-        Engineers: 0,
-        Sales: 0,
-        Product: 0,
-        Executives: 0
-    };
-
-    graphData.nodes.forEach(node => {
-        if (node.group === 'person' && node.role) {
-            const role = node.role.toLowerCase();
-            if (role.includes('investor') || role.includes('vc') || role.includes('partner')) roleCounts.Investors++;
-            else if (role.includes('founder') || role.includes('co-founder')) roleCounts.Founders++;
-            else if (role.includes('engineer') || role.includes('developer')) roleCounts.Engineers++;
-            else if (role.includes('sales') || role.includes('account')) roleCounts.Sales++;
-            else if (role.includes('product') || role.includes('manager')) roleCounts.Product++;
-            else if (role.includes('ceo') || role.includes('cto') || role.includes('vp') || role.includes('director')) roleCounts.Executives++;
-        }
-    });
-
-    const radarData = [
-        { subject: 'Investors', count: roleCounts.Investors, fullMark: 20 },
-        { subject: 'Founders', count: roleCounts.Founders, fullMark: 20 },
-        { subject: 'Engineers', count: roleCounts.Engineers, fullMark: 20 },
-        { subject: 'Sales', count: roleCounts.Sales, fullMark: 20 },
-        { subject: 'Product', count: roleCounts.Product, fullMark: 20 },
-        { subject: 'Executives', count: roleCounts.Executives, fullMark: 20 },
-    ];
+    const radarData = getNetworkComposition(graphData.nodes);
 
     // Dynamic Next Move
     const potentialMoves = graphData.nodes.filter(n => n.group === 'person' && n.name !== 'Preston Zen');
