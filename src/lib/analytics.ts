@@ -16,8 +16,8 @@ export interface GraphNode {
 }
 
 export interface GraphLink {
-    source: string | GraphNode;
-    target: string | GraphNode;
+    source: string | { id: string } | GraphNode;
+    target: string | { id: string } | GraphNode;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
 }
