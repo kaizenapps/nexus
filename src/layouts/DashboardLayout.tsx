@@ -1,10 +1,24 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { LayoutDashboard, Database, Brain, User, Settings, Cable, ChevronDown, Share2, Image } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function DashboardLayout() {
     const location = useLocation();
+    const navigate = useNavigate();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [project, setProject] = useState("Global Operations");
+
+    useEffect(() => {
+        const auth = localStorage.getItem("nexus_auth");
+        if (auth !== "true") {
+            navigate("/");
+        }
+    }, [navigate]);
+
+    if (localStorage.getItem("nexus_auth") !== "true") {
+        return null;
+    }
 
     const navItems = [
         { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
