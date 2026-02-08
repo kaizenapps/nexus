@@ -1,26 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { Photo, Tag } from '../types/Gallery';
-
-// Re-export types if needed or just use them
-// Ideally these match the ones in analytics.ts, but keeping them here for now
-export interface Node {
-    id: string;
-    name: string;
-    group: string; // 'person' | 'company' | 'investor' | 'event'
-    val: number;
-    [key: string]: any; // Allow extra properties
-}
-
-export interface Link {
-    source: string | { id: string };
-    target: string | { id: string };
-    [key: string]: any;
-}
-
-export interface GraphData {
-    nodes: Node[];
-    links: Link[];
-}
+import { Node, Link, GraphData } from '../types/graph';
 
 interface DataContextType {
     graphData: GraphData;

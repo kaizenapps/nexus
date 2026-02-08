@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { Node, Link } from '../context/DataContext'; // Reuse types
+import { Node, Link } from '../types/graph';
 
 export interface ParseResult {
     nodes: Node[];
@@ -7,20 +7,33 @@ export interface ParseResult {
     type: 'contact' | 'account' | 'unknown';
 }
 
+interface CSVRow {
+    id: string;
+    name?: string;
+    firstName?: string;
+    lastName?: string;
+    accountId?: string;
+    accountName?: string;
+    title?: string;
+    description?: string;
+    billingAddressCity?: string;
+    website?: string;
+    [key: string]: string | undefined;
+}
+
 export const parseCSVData = (csvContent: string): ParseResult => {
-    const { data, meta } = Papa.parse(csvContent, {
+    const { data, meta } = Papa.parse<CSVRow>(csvContent, {
         header: true,
         skipEmptyLines: true,
     });
 
     const headers = meta.fields || [];
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rows = data as any[];
+    const rows = data;
 
     // Detect type based on headers
     // Contacts usually have firstName, lastName, accountId
     // Accounts usually have billingAddressCity or just name and website
-    const isContact = headers.includes('firstName') || headers.includes('lastName');
+    const isContact = headers.includes('firstName') || headers.includes('lastName') || headers.includes('role') || headers.includes('title');
     const isAccount = !isContact && (headers.includes('billingAddressCity') || headers.includes('website'));
 
     const nodes: Node[] = [];
@@ -31,32 +44,27 @@ export const parseCSVData = (csvContent: string): ParseResult => {
 
         if (isAccount) {
             nodes.push({
+                ...row,
                 id: row.id,
                 name: row.name || 'Unknown Company',
                 group: 'company',
                 val: 25, // Larger size for companies
-                ...row
             });
         } else if (isContact) {
-            const fullName = `${row.firstName || ''} ${row.lastName || ''}`.trim() || row.name;
+            const fullName = `${row.firstName || ''} ${row.lastName || ''}`.trim() || row.name || 'Unknown Person';
             nodes.push({
+                ...row,
                 id: row.id,
                 name: fullName,
                 group: 'person',
                 val: 15,
-                role: row.title || row.description, // Use title as role if available
-                ...row
+                email: row.email || row.emailAddress,
+                role: row.role || row.title || row.description, // Use title as role if available
             });
 
             // Link to Account if present
             if (row.accountId) {
-                // Ensure the account node exists? We can create a placeholder if we want,
-                // but usually we might import accounts first.
-                // For now, let's just create the link. The graph visualization handles missing nodes gracefully usually,
-                // or we can add a placeholder node.
-
-                // Let's add a placeholder node for the account if we don't know it exists?
-                // Actually, duplicate nodes are filtered by `addGraphData`, so we can safely add a placeholder account node here.
+                // If accountName exists, create a placeholder node for the account
                 if (row.accountName) {
                      nodes.push({
                         id: row.accountId,
@@ -64,8 +72,6 @@ export const parseCSVData = (csvContent: string): ParseResult => {
                         group: 'company',
                         val: 25,
                         placeholder: true, // Mark as placeholder
-                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                        ...({} as any)
                     });
                 }
 
