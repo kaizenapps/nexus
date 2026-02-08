@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useData } from "../context/DataContext";
-import { Search, ArrowUpDown, Filter, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function DatabaseView() {
     const { graphData, setGraphData, addNodes } = useData();
