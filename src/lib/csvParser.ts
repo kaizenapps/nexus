@@ -1,10 +1,31 @@
 import Papa from 'papaparse';
-import { Node, Link } from '../context/DataContext'; // Reuse types
+import { Node, Link } from '../context/DataContext';
 
 export interface ParseResult {
     nodes: Node[];
     links: Link[];
     type: 'contact' | 'account' | 'unknown';
+}
+
+interface CSVBaseRow {
+    id: string;
+    name?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any; // Allow extra properties for spread into Node
+}
+
+interface CSVContactRow extends CSVBaseRow {
+    firstName?: string;
+    lastName?: string;
+    title?: string;
+    description?: string;
+    accountId?: string;
+    accountName?: string;
+}
+
+interface CSVAccountRow extends CSVBaseRow {
+    billingAddressCity?: string;
+    website?: string;
 }
 
 export const parseCSVData = (csvContent: string): ParseResult => {
@@ -18,64 +39,59 @@ export const parseCSVData = (csvContent: string): ParseResult => {
     const rows = data as any[];
 
     // Detect type based on headers
-    // Contacts usually have firstName, lastName, accountId
-    // Accounts usually have billingAddressCity or just name and website
     const isContact = headers.includes('firstName') || headers.includes('lastName');
     const isAccount = !isContact && (headers.includes('billingAddressCity') || headers.includes('website'));
 
     const nodes: Node[] = [];
     const links: Link[] = [];
 
-    rows.forEach((row) => {
-        if (!row.id) return; // Skip rows without ID
+    if (isContact) {
+        const contactRows = rows as CSVContactRow[];
+        contactRows.forEach((row) => {
+            if (!row.id) return;
 
-        if (isAccount) {
+            const fullName = `${row.firstName || ''} ${row.lastName || ''}`.trim() || row.name || '';
+
             nodes.push({
-                id: row.id,
-                name: row.name || 'Unknown Company',
-                group: 'company',
-                val: 25, // Larger size for companies
-                ...row
-            });
-        } else if (isContact) {
-            const fullName = `${row.firstName || ''} ${row.lastName || ''}`.trim() || row.name;
-            nodes.push({
-                id: row.id,
                 name: fullName,
                 group: 'person',
                 val: 15,
-                role: row.title || row.description, // Use title as role if available
+                role: row.title || row.description,
                 ...row
             });
 
-            // Link to Account if present
             if (row.accountId) {
-                // Ensure the account node exists? We can create a placeholder if we want,
-                // but usually we might import accounts first.
-                // For now, let's just create the link. The graph visualization handles missing nodes gracefully usually,
-                // or we can add a placeholder node.
-
-                // Let's add a placeholder node for the account if we don't know it exists?
-                // Actually, duplicate nodes are filtered by `addGraphData`, so we can safely add a placeholder account node here.
                 if (row.accountName) {
-                     nodes.push({
+                    nodes.push({
                         id: row.accountId,
                         name: row.accountName,
                         group: 'company',
                         val: 25,
-                        placeholder: true, // Mark as placeholder
+                        placeholder: true,
                         // eslint-disable-next-line @typescript-eslint/no-explicit-any
                         ...({} as any)
                     });
                 }
 
                 links.push({
-                    source: row.id, // Person
-                    target: row.accountId // Company
+                    source: row.id,
+                    target: row.accountId
                 });
             }
-        }
-    });
+        });
+    } else if (isAccount) {
+        const accountRows = rows as CSVAccountRow[];
+        accountRows.forEach((row) => {
+            if (!row.id) return;
+
+            nodes.push({
+                name: row.name || 'Unknown Company',
+                group: 'company',
+                val: 25,
+                ...row
+            });
+        });
+    }
 
     return {
         nodes,
