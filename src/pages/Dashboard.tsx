@@ -1,6 +1,7 @@
 import { Brain, Target, Zap, ChevronRight, Activity, Users, Globe } from "lucide-react";
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import { useNavigate } from "react-router-dom";
+import { useMemo } from "react";
 import { useData } from "../context/DataContext";
 import { calculateGraphMetrics, findStrategicMove } from "../lib/analytics";
 
@@ -8,8 +9,8 @@ export default function Dashboard() {
     const navigate = useNavigate();
     const { graphData } = useData();
 
-    const metrics = calculateGraphMetrics(graphData.nodes, graphData.links);
-    const strategicMove = findStrategicMove(graphData.nodes, graphData.links);
+    const metrics = useMemo(() => calculateGraphMetrics(graphData.nodes, graphData.links), [graphData.nodes, graphData.links]);
+    const strategicMove = useMemo(() => findStrategicMove(graphData.nodes, graphData.links), [graphData.nodes, graphData.links]);
 
     const radarData = [
         { subject: 'Investors', count: metrics.roleCounts.Investors, fullMark: 20 },
